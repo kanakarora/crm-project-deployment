@@ -35,7 +35,7 @@ const SideBar = ({ toggleSideBar }) => {
             <li className="flex gap-5 items-center">
               {" "}
               <img src={client} alt="" />
-              <Link to="/client">Client</Link>
+              <Link to="/clients">Client</Link>
             </li>
             <li className="flex gap-5 items-center">
               {" "}

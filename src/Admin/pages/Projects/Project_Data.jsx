@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { BiDownArrow } from "react-icons/bi";
 import { SlReload } from "react-icons/sl";
@@ -20,10 +20,12 @@ const ProjectData = () =>{
         <div className="container">
           {/* project summary header */}
         <div className="flex justify-evenly items-center w-[70%] md:w-[30%]   p-0 ">
+          <Link to = "/addproject">
          <button className="bg-purple-800  p-2.5 rounded mx-0.5 flex justify-start items-center px-8 text-white">
          <IoMdAdd className=" mr-3 text-2xl font-bold"/>
          New Project
          </button>
+         </Link>
          <div className="bg-slate-300 p-1 rounded">
          <BsGraphUpArrow  className="text-4xl "/>
          </div>

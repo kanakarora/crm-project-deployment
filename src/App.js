@@ -140,11 +140,13 @@ const App = () => {
           <Route path="/taskview" element={<Taskview />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/taskdata" element={<Task_Data />} />
+          <Route path = "/addproject" element = {<Add_Project/>}/>
            <Route path="/create-new-project" element={<Add_Project />}></Route>
           <Route path="/add-department" element={<AddDepartment />} />
            <Route path="/editprofile" element={<Editprofile />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
+          <Route path = "/clients" element = {<Clients/>}/>
          </Route>
 
         <Route element={<Editstaff />}>
