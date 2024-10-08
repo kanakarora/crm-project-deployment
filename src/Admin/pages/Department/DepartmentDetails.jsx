@@ -7,10 +7,10 @@ import CachedIcon from '@mui/icons-material/Cached';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-const DepartmentDetail = () => {
+const Department = () => {
     return (
         <div className='absolute top-[95px] pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
-          <Link to="/adddepartment" className='bg-[#511992]  p-2 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Department</Link>
+          <Link to="/add-department" className='bg-[#511992]  p-2 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Department</Link>
     
           <div className='table-section mt-5 bg-white shadow p-4 pl-0 rounded-sm pr-0'>
     
@@ -121,4 +121,4 @@ const DepartmentDetail = () => {
       )
 }
 
-export default DepartmentDetail
+export default Department;

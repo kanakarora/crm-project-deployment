@@ -44,10 +44,10 @@ import EditSalaryDetails from "./Admin/pages/editstaff/EditSalaryDetails";
 import EditPenalty from "./Admin/pages/editstaff/EditPenalty";
 import SalaryOverview from "./Admin/pages/editstaff/SalaryOverview";
 import StaffSalarySummry from "./Admin/pages/editstaff/StaffSalarySummry";
-
- import Editprofile from "../src/Admin/pages/profile/Editprofile";
+import Editprofile from "../src/Admin/pages/profile/Editprofile";
 import Task_Status from "./Admin/pages/Projects/Task_Status";
 import Edit_Task_Status from "./Admin/pages/Projects/Edit_Task_Status";
+import ProjectData from "./Admin/pages/Projects/Project_Data";
  
 const App = () => {
   const [toggleSideBar, setToggleSideBar] = useState(true);
@@ -135,6 +135,7 @@ const App = () => {
           <Route path="/attendence_summary" element={<Attendence_summary />} />
           <Route path="/taskdata" element={<Task />} />
           <Route path="/project_summary" element={<Project_Summary />} />
+          <Route path="/projectdata" element={<ProjectData />} />
           <Route path="/overtime" element={<Overtime />} />
           <Route path="/taskview" element={<Taskview />} />
           <Route path="/clients" element={<Clients />} />
