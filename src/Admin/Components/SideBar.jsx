@@ -26,7 +26,7 @@ const SideBar = ({ toggleSideBar }) => {
             </li>
             <li className="flex gap-5 items-center">
               {" "}
-              <img src={project} alt="" /> <Link to="/project"> Project </Link>
+              <img src={project} alt="" /> <Link to="/projectdata"> Project </Link>
             </li>
             <li className="flex gap-5 items-center">
               {" "}
@@ -35,7 +35,7 @@ const SideBar = ({ toggleSideBar }) => {
             <li className="flex gap-5 items-center">
               {" "}
               <img src={client} alt="" />
-              <Link to="/client">Client</Link>
+              <Link to="/clients">Client</Link>
             </li>
             <li className="flex gap-5 items-center">
               {" "}
@@ -45,7 +45,7 @@ const SideBar = ({ toggleSideBar }) => {
             <li className="flex gap-5 items-center">
               {" "}
               <img src={staff} alt="" />
-              <Link to="/staff-menu">Staff</Link>{" "}
+              <Link to="/">Staff</Link>{" "}
             </li>
             <li className="flex gap-5 items-center">
               {" "}

@@ -53,6 +53,8 @@ import Client_Project from "../src/Clients/Client_Project";
 import Edit_Task_Status from "./Admin/pages/Projects/Edit_Task_Status";
 import Edit_Project from "./Admin/pages/Projects/Edit_Project";
 import Project_Progress from "../src/Clients/Project_Progress";
+import ProjectData from "./Admin/pages/Projects/Project_Data";
+import AddNewClient from "./Admin/pages/Clients/AddNewClient";
 
 
 
@@ -125,15 +127,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<AdminLayout />}>
-          <Route path="/project-overview" element={<ProjectsOverview />} />
+        <Route path = "/" element={<AdminLayout />}>
+          <Route index element={<StaffMenu />} />
           <Route path="/new-ticket" element={<NewTicket />} />
-          
           <Route path="/addrole" element={<AddRole />} />
           <Route path="/role" element={<Role />} />
           <Route path="/editrole" element={<EditRole />} />
           <Route path="/editdepartment" element={<EditDepartment />} />
-          <Route path="/staff-menu" element={<StaffMenu />} />
           <Route path="/add-one-staff" element={<AddOneStaff />} />
           <Route path="/department" element={<Department />} />
           <Route path="/salary_Details" element={<Salary_Details />} />
@@ -143,15 +143,13 @@ const App = () => {
           <Route path="/attendence_summary" element={<Attendence_summary />} />
           <Route path="/project_summary" element={<Project_Summary />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path = "/projectdata" element = {<ProjectData/>}/>
           <Route path="/overtime" element={<Overtime />} />
           <Route path="/taskview" element={<Taskview />} />
           <Route path="/clients" element={<Clients />} />
-          <Route path="/taskdata" element={<Task_Data />} />
            <Route path="/add-department" element={<AddDepartment/>}/>
           <Route path="/calender" element={<Calender/>}/>
-
- 
-          <Route path="/create-new-project" element={<Add_Project />}></Route>
+         <Route path="/create-new-project" element={<Add_Project />}></Route>
           <Route path="/add-department" element={<AddDepartment />} />
            <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
@@ -163,6 +161,7 @@ const App = () => {
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
           <Route path="/clientproject" element={<Client_Project />} />
           <Route path="/projectprogress" element={<Project_Progress />} />
+          <Route path = "/addnewclient" element = {<AddNewClient/>} />
         
 
         </Route>
