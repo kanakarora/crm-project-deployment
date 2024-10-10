@@ -150,9 +150,6 @@ const Clients = () => {
             )
         },
 
-        //   { title: "2", content: "This is the content for item 2" },
-        //     { title: "3", content: "This is the content for item 3" },
-
     ];
     return (
         <div className=" w-full absolute pl-[145px] top-[95px] right-[5px] ">

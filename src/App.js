@@ -55,6 +55,8 @@ import Edit_Project from "./Admin/pages/Projects/Edit_Project";
 import Project_Progress from "../src/Clients/Project_Progress";
 import ProjectData from "./Admin/pages/Projects/Project_Data";
 import AddNewClient from "./Admin/pages/Clients/AddNewClient";
+import CustomDialog from "./Admin/pages/Clients/DialougeBox";
+import Note from "./Admin/Components/checkingCode";
 
 
 
@@ -154,7 +156,8 @@ const App = () => {
            <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
           <Route path="/edit-project" element={<Edit_Project/>} />
- 
+          <Route path = "/dialougebox" element = {<CustomDialog/>}/>
+          <Route path = "/Note" element = {<Note/>}/>
           <Route path="/task" element={<Task />} />
           <Route path="/editprofile" element={<Editprofile />} />
           <Route path="/taskstatus" element={<Task_Status />} />
@@ -162,9 +165,7 @@ const App = () => {
           <Route path="/clientproject" element={<Client_Project />} />
           <Route path="/projectprogress" element={<Project_Progress />} />
           <Route path = "/addnewclient" element = {<AddNewClient/>} />
-        
-
-        </Route>
+         </Route>
 
         <Route element={<Editstaff />}>
           <Route path="/personal-detail" element={<PersonalDetail />} />
