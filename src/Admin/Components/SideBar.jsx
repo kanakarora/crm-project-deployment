@@ -27,7 +27,7 @@ const SideBar = ({ toggleSideBar }) => {
             </li>
             <li className="flex gap-5 items-center">
               {" "}
-              <img src={project} alt="" /> <Link to="/projectdata"> Project </Link>
+              <img src={project} alt="" /> <Link to="/projectsummary"> Project </Link>
             </li>
             <li className="flex gap-5 items-center">
               {" "}

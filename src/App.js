@@ -33,10 +33,9 @@ import Worktime from "./Admin/pages/StaffSection/Attendance/Worktime";
 import Reviewfine from "./Admin/pages/StaffSection/Attendance/Reviewfine";
 import Overtime from "./Admin/pages/StaffSection/Attendance/Overtime";
 import Project_Summary from "./Admin/pages/Projects/Project_Summary";
-// import ProjectsOverview from "../src/Admin/pages/Projects/Project_overview";
-import Projects from '../src/Admin/pages/Projects/Projects';
+import Project_Setting from "./Admin/pages/Projects/ProjectSettings";
 import Taskview from "./Admin/pages/Tasks/Taskview";
-import Task from "./Admin/pages/Tasks/Task";
+import Task from "./Admin/pages/Projects/Task";
 import Clients from "./Admin/pages/Clients/Clients";
 import NewTicket from "../src/Admin/pages/Projects/NewTicketForm";
 import Add_Project from "../src/Admin/pages/Projects/Add_Project";
@@ -64,6 +63,9 @@ import AddNewClient from "./Admin/pages/Clients/AddNewClient";
 import EditClient from "./Admin/pages/Clients/EditClient";
 import Subscription from './Admin/pages/Subscription Plan/Subscription';
 import AddNewTask from "./Admin/pages/Projects/AddNewTask";
+import ProjectSummary from "./Admin/pages/Projects/Project_Summary";
+import ProjectOverView from "./Admin/pages/Projects/Project_overview";
+
 
 
 
@@ -136,7 +138,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path = "/" element={<AdminLayout />}>
+        
           <Route index element={<StaffMenu />} />
           <Route path="/new-ticket" element={<NewTicket />} />
           <Route path="/addrole" element={<AddRole />} />
@@ -145,6 +149,7 @@ const App = () => {
           <Route path="/addnewclient" element={<AddNewClient />} />
           <Route path="/editclient" element={<EditClient />} />
            <Route path="/addrole" element={<AddRole />} />
+           <Route path="/taskview" element={<Taskview />} />
           <Route path="/role" element={<Role />} />
           <Route path="/editrole" element={<EditRole />} />
           <Route path="/editdepartment" element={<EditDepartment />} />
@@ -155,9 +160,10 @@ const App = () => {
           <Route path="/reviewfine" element={<Reviewfine />} />
           <Route path="/worktime" element={<Worktime />} />
           <Route path="/attendence_summary" element={<Attendence_summary />} />
-          <Route path="/project_summary" element={<Project_Summary />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projectsummary" element={<ProjectSummary />} />
+          <Route path = "/projectsettings" element = {<Project_Setting/>} />
           <Route path = "/projectdata" element = {<ProjectData/>}/>
+          <Route path = "/projectoverview" element = {<ProjectOverView/>}/>
           <Route path="/overtime" element={<Overtime />} />
           <Route path="/taskview" element={<Taskview />} />
           <Route path="/clients" element={<Clients />} />

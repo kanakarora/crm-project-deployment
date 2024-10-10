@@ -20,9 +20,9 @@ import Notes from "./Nots";
 import Activity from "./Activity";
 import Calender from "./Calender";
 import People from "./People";
-import Task from '../Tasks/Task';
+import Task from './Task'
 
-const Projects = () => {
+const ProjectOverView = () => {
   const [activeTab, setactiveTab] = useState("Overview");
 
   const handleActiveClick = (tab) => {
@@ -170,4 +170,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectOverView;

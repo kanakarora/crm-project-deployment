@@ -3,7 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { Link, useNavigate } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const NewTask = () => {
+const ProjectSummary = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [showButtons, setShowButtons] = useState(false);
   const navigate = useNavigate();
@@ -89,16 +89,18 @@ const NewTask = () => {
                       onMouseLeave={() => setShowButtons(false)}
                       className=" relative text-[12px] font-medium flex gap-3 mt-2"
                     >
-                      <button className="text-[#2563eb] hover:text-blue-900 ">
+                      <Link to = "/projectoverview"><button className="text-[#2563eb] hover:text-blue-900 ">
                         View
                       </button>
+                      </Link>
                       <button className="text-[#2563eb] hover:text-blue-900 border-x border-black px-2">
                         Copy Project
                       </button>
 
-                      <button onClick={handleEditForm} className="text-[#2563eb] hover:text-blue-900 border-r border-black pr-2">
+                      <Link to = "/edit-project"><button onClick={handleEditForm} className="text-[#2563eb] hover:text-blue-900 border-r border-black pr-2">
                         Edit
                       </button>
+                      </Link>
                       <button className="text-red-700 hover:text-red-800">
                         Delete
                       </button>
@@ -122,9 +124,6 @@ const NewTask = () => {
         </table>
       ),
     },
-
-    //   { title: "2", content: "This is the content for item 2" },
-    //     { title: "3", content: "This is the content for item 3" },
   ];
   return (
     <div className=" w-full absolute pl-[145px] top-[95px] right-[5px] ">
@@ -142,12 +141,6 @@ const NewTask = () => {
           <h2 className="font-semibold mb-[10px]">Project Summary</h2>
 
           <div className="flex items-center gap-[14px] mb-[10px]">
-            <Link
-              to="/"
-              className="text-[#fff] text-[12px] bg-[#511992] font-medium rounded-2xl p-[8px] text-center "
-            >
-              <AddIcon className="newadd" /> Add New
-            </Link>
             <input
               className="p-[6px] rounded-2xl summary-border text-[13px] w-[140px]"
               type="text"
@@ -196,4 +189,4 @@ const NewTask = () => {
   );
 };
 
-export default NewTask;
+export default ProjectSummary;
