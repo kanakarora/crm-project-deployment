@@ -10,7 +10,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AvTimerIcon from '@mui/icons-material/AvTimer';
 import CloseIcon from '@mui/icons-material/Close';
-const Attendence_summary = () => {
+const Attendence_Summary = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -167,9 +167,9 @@ const Attendence_summary = () => {
 
             </div>
             <div className='bg-[#f1f1f1] p-[20px] rounded-md mt-[24px] flex gap-[10px]'>
-                <Link to="/" className='total-staff text-[blue] w-[12%] text-[14px] font-medium'>Daily Work Entry</Link>
-                <Link to="/" className='total-staff text-[blue] w-[4%] text-[14px] font-medium'>Fine</Link>
-                <Link to="/" className=' w-[12%] text-[blue] text-[14px] font-medium'>Overtime</Link>
+                <Link to="/worktime" className='total-staff text-[blue] w-[12%] text-[14px] font-medium'>Daily Work Entry</Link>
+                <Link to="/reviewfine" className='total-staff text-[blue] w-[4%] text-[14px] font-medium'>Fine</Link>
+                <Link to="/overtime" className=' w-[12%] text-[blue] text-[14px] font-medium'>Overtime</Link>
             </div>
             <div className="relative">
                 <SearchIcon className='absolute top-[34px] right-[7px]' />
@@ -730,7 +730,7 @@ const Attendence_summary = () => {
 
 
 
-export default Attendence_summary
+export default Attendence_Summary;
 
 
 

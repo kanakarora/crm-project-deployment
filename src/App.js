@@ -65,6 +65,7 @@ import Subscription from './Admin/pages/Subscription Plan/Subscription';
 import AddNewTask from "./Admin/pages/Projects/AddNewTask";
 import ProjectSummary from "./Admin/pages/Projects/Project_Summary";
 import ProjectOverView from "./Admin/pages/Projects/Project_overview";
+import Attendence_Summary from "./Admin/pages/StaffSection/Attendance/Attendence_summary";
 
 
 
@@ -159,7 +160,7 @@ const App = () => {
           <Route path="/overtime" element={<Overtime />} />
           <Route path="/reviewfine" element={<Reviewfine />} />
           <Route path="/worktime" element={<Worktime />} />
-          <Route path="/attendence_summary" element={<Attendence_summary />} />
+          <Route path="/attendence_summary" element={<Attendence_Summary />} />
           <Route path="/projectsummary" element={<ProjectSummary />} />
           <Route path = "/projectsettings" element = {<Project_Setting/>} />
           <Route path = "/projectdata" element = {<ProjectData/>}/>
@@ -169,7 +170,7 @@ const App = () => {
           <Route path="/clients" element={<Clients />} />
            <Route path="/add-department" element={<AddDepartment/>}/>
           <Route path="/calender" element={<Calender/>}/>
-         <Route path="/create-new-project" element={<Add_Project />}></Route>
+         <Route path="/create-new-project" element={<Add_Project />}/>
           <Route path="/add-department" element={<AddDepartment />} />
            <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />

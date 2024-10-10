@@ -1,24 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import profile from '../../../Assets/Images/profile.svg'
+import profile from '../../../Assets/Images/profile.svg';
+import { useNavigate } from 'react-router-dom';
+
 const AddOneStaff = () => {
+    const navigate = useNavigate();
   return (
     <div className='add-one-staff'>
-        <Link to="/staff-menu" className='flex items-center gap-[10px] text-[20px] font-medium		'><KeyboardBackspaceIcon/>Add Staff</Link>
-        {/* <div className='flex justify-between mt-4 border border-l-2 p-3 rounded-md shadow'>
-            <div className=''>
-                <img src={profile} className='bg-[#CCCCCC] rounded-full p-2 w-[40px] '/>
-                <h5 className='mt-2'>Add Staff</h5>
-            </div>
-            <div className='flex gap-[20px] items-center'>
-                <button className='first-btn'>Cancel</button>
-                <button className='second-btn'>Save</button>
-                
-            </div>
-
-        </div> */}
-
+       <div onClick={()=>{navigate("/")}}><KeyboardBackspaceIcon/>Add Staff</div>
         <form className=' w-[100%] xl:w-[80%] m-auto mt-[60px] shadow-md  xl:p-[24px] p-[12px] border rounded-md  border-1' >
             <div className='flex w-[100%] gap-[10px] justify-between  xl:mb-4 mb-[6px] xl:flex-row flex-col'>
                 <div className='w-[100%] xl:w-[48%] 2xl:w-[48%]  '>

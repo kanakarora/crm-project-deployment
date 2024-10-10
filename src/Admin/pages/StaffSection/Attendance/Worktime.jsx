@@ -3,13 +3,16 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from "react-router-dom";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 const Worktime = () => {
+
+    const navigate = useNavigate();
   return (
     <>
     <div className='w-full p-[20px]'>
     <div className=''>
-        <Link className='text-[14px]' to = "/"> <ArrowBackIcon className='back-arrow text-[blue]'/> Back</Link>
+     <div onClick={()=>navigate("/attendence_summary")}><ArrowBackIcon className='back-arrow text-[blue]'/> Back</div>
     </div>
     <div className='flex justify-between items-center mt-[20px] mb-[20px]'>
         <h2 className='font-medium'>Daily Work Time</h2>

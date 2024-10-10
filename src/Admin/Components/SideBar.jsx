@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/Images/logo.png";
 import home from "../../Assets/Images/home.png";
 import project from "../../Assets/Images/project.png";
@@ -11,6 +11,13 @@ import { Link } from "react-router-dom";
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 const SideBar = ({ toggleSideBar }) => {
+
+  const [toggleStaff , setToggleStaff] = useState(false);
+
+  const handleToggleStaff = () =>{
+   setToggleStaff(!toggleStaff)
+  }
+
   return (
     <div
       className={`md:flex md:flex-shrink-0 absolute md:relative mt-20 md:mt-0 h-[200vh] ${
@@ -43,10 +50,15 @@ const SideBar = ({ toggleSideBar }) => {
               <img src={report} alt="" />
               <Link to="/report">Report</Link>{" "}
             </li>
-            <li className="flex gap-5 items-center">
+            <li className="flex flex-col gap-5 items-center" onClick={handleToggleStaff}>
               {" "}
               <img src={staff} alt="" />
               <Link to="/">Staff</Link>{" "}
+              {toggleStaff && 
+              <ol className="text-purple-500 ml-3">
+                <li><Link to = "/attendence_summary">Attendence</Link></li>
+              </ol>
+}
             </li>
             <li className="flex gap-5 items-center">
               {" "}
