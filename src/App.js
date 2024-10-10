@@ -62,7 +62,8 @@ import CalenderYear from "./Admin/pages/Calender/CalenderYear";
 import ExpensePage from "../src/Admin/Expenses/Expense";
 import AddNewClient from "./Admin/pages/Clients/AddNewClient";
 import EditClient from "./Admin/pages/Clients/EditClient";
-import Subscription from './Admin/pages/Subscription Plan/Subscription'
+import Subscription from './Admin/pages/Subscription Plan/Subscription';
+import AddNewTask from "./Admin/pages/Projects/AddNewTask";
 
 
 
@@ -175,10 +176,7 @@ const App = () => {
           <Route path="/meeting" element={<Meeting/>}/>
           <Route path="/day-wise" element={<CalenderDay/>}/>
           <Route path="/year-wise" element={<CalenderYear/>}/>
-
-          
-          
-
+          <Route path = "/addnewtask" element = {<AddNewTask/>}/>
           <Route path="/create-new-project" element={<Add_Project />}/>
           <Route path="/add-department" element={<AddDepartment />} />
            <Route path="/taskstatus" element={<Task_Status />} />
