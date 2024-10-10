@@ -73,16 +73,6 @@ const Clients = () => {
 
                                 <th className="text-[11px] font-medium p-[10px] w-[150px] border-r whitespace-nowrap	">Groups</th>
                                 <th className="text-[11px] font-medium p-[10px] w-[150px] border-r whitespace-nowrap	">Date Created</th>
-
-
-
-
-
-
-
-
-
-
                             </tr>
                         </thead>
                     </table>
@@ -157,8 +147,8 @@ const Clients = () => {
             <div className="bg-[#fff] p-[10px] ml-[140px]">
                 <div className="mb-[14px] flex gap-[10px] items-center">
 
-                    <Link to="/" className="text-[#fff] text-[14px] bg-[#8a25b0]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <AddIcon className="newadd" />Client</Link>
+                    <Link to="/addnewclient" className="text-[#fff] text-[14px] bg-[#8a25b0]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <AddIcon className="newadd" /> New Client</Link>
                     <Link to="/" className="text-[#fff] text-[14px] bg-[#8a25b0]   focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <AddIcon className="newadd" /> Import Customers</Link>
                     <Link to="/" className="text-[#000] text-[14px] bg-[#f4f2f2]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
