@@ -1,21 +1,8 @@
-import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
-import { FiPlus } from "react-icons/fi";
-import CustomDialog from "./DialougeBox";
-import { MdOutlineDone } from "react-icons/md";
-const AddNewClient = () =>{
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const groups = [
-    { id: 1, name: 'ASTROPITAH SMM PROJECT' },
-    { id: 2, name: 'digital' },
-    { id: 3, name: 'HONEY TOUR & TRAVELS' },
-    { id: 4, name: 'vevge' },
-    { id: 5, name: 'webs' }
-  ];
-  
 
+const AddNewClient = () =>{
+
+  const [defaultLanguages , setDefaultLanguages] = useState(["portuguese","German","indonesia","catlan" , "Spanish" , "Turkish" , "Slovak" , "Vitnamese" , "Swedish" , "Portguese_br"])
   return(
 <div class="bg-gray-100 flex justify-center items-center min-h-screen">
 
@@ -58,43 +45,7 @@ const AddNewClient = () =>{
       {/* <!-- Groups --> */}
       <div className="relative">
         <label for="groups" class="block text-sm font-medium text-gray-700">Groups</label>
-        <div className="relative">
-                <input 
-                  type="text" 
-                  id="groups" 
-                  className="mt-1 block w-full border border-gray-300 rounded-md p-2 pr-16 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
-                  placeholder="Nothing selected" 
-                />
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 mt-1">
-                  <IoIosArrowDown  className="h-4 w-4 text-gray-400 mr-2" onClick={() => setIsOpen(!isOpen)}/>
-                  <FiPlus  className="h-4 w-4 text-gray-400"  onClick={() => setIsDialogOpen(true)}/>
-                </div>
-              </div>
-              <CustomDialog 
-        isOpen={isDialogOpen} 
-        onClose={() => setIsDialogOpen(false)} 
-      />
-        {isOpen && (
-        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
-          <div className="border-b border-gray-200">
-            <div className="flex justify-between px-4 py-2 text-sm text-black-600">
-              <button className="hover:underline border border-gray-200 w-1/2 py-2">Select All</button>
-              <button className="hover:underline border border-gray-200 w-1/2 py-2">Deselect All</button>
-            </div>
-          </div>
-          <ul className="max-h-60 overflow-auto">
-            {groups.map(group => (
-              <li 
-                key={group.id}
-                className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
-              >
-                <span className="text-sm">{group.name}</span>
-                {group.selected && <MdOutlineDone className="h-4 w-4 text-blue-600" />}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        <input type="text" id="groups" class="mt-1 block w-full border border-gray-300 rounded-md p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Nothing selected" />
       </div>
 
       {/* <!-- Currency and Default Language in one row --> */}
@@ -112,10 +63,16 @@ const AddNewClient = () =>{
         {/* <!-- Default Language --> */}
         <div>
           <label for="language" class="block text-sm font-medium text-gray-700">Default Language</label>
-          <select id="language" class="mt-1 block w-full border border-gray-300 bg-white rounded-md p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+
+           <select id="language" class="mt-1 block w-full border border-gray-300 bg-white rounded-md p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             <option value="default">System Default</option>
             {/* <!-- Add other language options if needed --> */}
-          </select>
+             {defaultLanguages.map(option=>{
+              return <>
+               <option>{option}</option>
+              </>
+            })}
+           </select>
         </div>
       </div>
 

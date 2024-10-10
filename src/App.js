@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Assets/css/roledetail.css";
 import "../src/Assets/css/new.css";
 import "../src/Assets/css/customer.css";
+import "../src/Assets/css/subscribe.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import NavBar from "./Admin/Components/NavBar";
 import SideBar from "./Admin/Components/SideBar";
 import Project from "./Admin/pages/Projects/Project_Data";
-
 import Role from "./Admin/pages/Roles/RoleDetails";
 import Department from "./Admin/pages/Department/DepartmentDetails";
 import AddRole from "./Admin/pages/Roles/Add_Role";
@@ -33,7 +33,7 @@ import Worktime from "./Admin/pages/StaffSection/Attendance/Worktime";
 import Reviewfine from "./Admin/pages/StaffSection/Attendance/Reviewfine";
 import Overtime from "./Admin/pages/StaffSection/Attendance/Overtime";
 import Project_Summary from "./Admin/pages/Projects/Project_Summary";
-import ProjectsOverview from "../src/Admin/pages/Projects/Project_overview";
+// import ProjectsOverview from "../src/Admin/pages/Projects/Project_overview";
 import Projects from '../src/Admin/pages/Projects/Projects';
 import Taskview from "./Admin/pages/Tasks/Taskview";
 import Task from "./Admin/pages/Tasks/Task";
@@ -54,9 +54,15 @@ import Edit_Task_Status from "./Admin/pages/Projects/Edit_Task_Status";
 import Edit_Project from "./Admin/pages/Projects/Edit_Project";
 import Project_Progress from "../src/Clients/Project_Progress";
 import ProjectData from "./Admin/pages/Projects/Project_Data";
-import AddNewClient from "./Admin/pages/Clients/AddNewClient";
 import CustomDialog from "./Admin/pages/Clients/DialougeBox";
 import Note from "./Admin/Components/checkingCode";
+import Meeting from "./Admin/pages/Calender/Meeting";
+import CalenderDay from "./Admin/pages/Calender/CalenderDay";
+import CalenderYear from "./Admin/pages/Calender/CalenderYear";
+import ExpensePage from "../src/Admin/Expenses/Expense";
+import AddNewClient from "./Admin/pages/Clients/AddNewClient";
+import EditClient from "./Admin/pages/Clients/EditClient";
+import Subscription from './Admin/pages/Subscription Plan/Subscription'
 
 
 
@@ -91,8 +97,8 @@ const App = () => {
               handleToggleSideBar={handleToggleSideBar}
               toggleSideBar={toggleSideBar}
             />
-            <main className={`flex-1 overflow-x-hidden overflow-y-auto  `}>
-              <div className=" mx-auto px-4 pl-3 pr-3 py-8 lg:px-4 view-not">
+            <main className={`flex-1 overflow-x-hidden overflow-y-auto  m-[30px]   `}>
+              <div className="mx-auto px-4 pl-3 pr-3 py-8 lg:px-4 view-not">
                 <Outlet />
               </div>
             </main>
@@ -133,6 +139,11 @@ const App = () => {
           <Route index element={<StaffMenu />} />
           <Route path="/new-ticket" element={<NewTicket />} />
           <Route path="/addrole" element={<AddRole />} />
+          {/* <Route path="/project-overview" element={<ProjectsOverview />} /> */}
+          <Route path="/new-ticket" element={<NewTicket />} />
+          <Route path="/addnewclient" element={<AddNewClient />} />
+          <Route path="/editclient" element={<EditClient />} />
+           <Route path="/addrole" element={<AddRole />} />
           <Route path="/role" element={<Role />} />
           <Route path="/editrole" element={<EditRole />} />
           <Route path="/editdepartment" element={<EditDepartment />} />
@@ -158,14 +169,33 @@ const App = () => {
           <Route path="/edit-project" element={<Edit_Project/>} />
           <Route path = "/dialougebox" element = {<CustomDialog/>}/>
           <Route path = "/Note" element = {<Note/>}/>
+          {/* <Route path="/taskdata" element={<Task_Data />} /> */}
+           <Route path="/add-department" element={<AddDepartment/>}/>
+          <Route path="/calender" element={<Calender/>}/>
+          <Route path="/meeting" element={<Meeting/>}/>
+          <Route path="/day-wise" element={<CalenderDay/>}/>
+          <Route path="/year-wise" element={<CalenderYear/>}/>
+
+          
+          
+
+          <Route path="/create-new-project" element={<Add_Project />}/>
+          <Route path="/add-department" element={<AddDepartment />} />
+           <Route path="/taskstatus" element={<Task_Status />} />
+          <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
+          <Route path="/edit-project" element={<Edit_Project/>} /> 
           <Route path="/task" element={<Task />} />
           <Route path="/editprofile" element={<Editprofile />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
           <Route path="/clientproject" element={<Client_Project />} />
           <Route path="/projectprogress" element={<Project_Progress />} />
-          <Route path = "/addnewclient" element = {<AddNewClient/>} />
-         </Route>
+          <Route path="/note" element={<Note />} />
+          <Route path="/expensepage" element={<ExpensePage />} />
+        
+
+          <Route path="/subscription-plan" element={<Subscription/>}/>
+        </Route>
 
         <Route element={<Editstaff />}>
           <Route path="/personal-detail" element={<PersonalDetail />} />
@@ -185,19 +215,13 @@ const App = () => {
             element={<BackgroundVerification />}
           />
           <Route path="/verify-aadhar" element={<VerifyAadhaar />} />
-     
-        </Route>
-
-        <Route element={<AuthLayout />}>
+          </Route>
+         <Route element={<AuthLayout />}>
           <Route path="/authentication" element={<MultiStepForm />} />
         </Route>
-
         <Route element={<CustomerPanel />}>
           <Route path="/customer-panel"></Route>
-         
-        </Route>
-      
-
+          </Route>
 
       </Routes>
     </BrowserRouter>
