@@ -192,8 +192,6 @@ const App = () => {
           <Route path="/projectprogress" element={<Project_Progress />} />
           <Route path="/note" element={<Note />} />
           <Route path="/expensepage" element={<ExpensePage />} />
-        
-
           <Route path="/subscription-plan" element={<Subscription/>}/>
         </Route>
 
@@ -209,7 +207,6 @@ const App = () => {
           <Route path="/edit-penalty" element={<EditPenalty />} />
           <Route path="/salary-overview" element={<SalaryOverview />} />
           <Route path="/staff-salary-summary" element={<StaffSalarySummry />} />
-
           <Route
             path="/background-verification"
             element={<BackgroundVerification />}
