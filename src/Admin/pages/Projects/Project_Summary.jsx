@@ -3,11 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { Link, useNavigate } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-<<<<<<< HEAD
-const ProjectSummary = () => {
-=======
 const Project_Summary = () => {
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
   const [openIndex, setOpenIndex] = useState(null);
   const [showButtons, setShowButtons] = useState(false);
   const navigate = useNavigate();
@@ -140,15 +136,12 @@ const Project_Summary = () => {
           <h2 className="font-semibold mb-[10px]">Project Summary</h2>
 
           <div className="flex items-center gap-[14px] mb-[10px]">
-<<<<<<< HEAD
-=======
             <Link
               to="/"
               className="text-[#fff] text-[12px] bg-[#8a25b0] font-medium rounded-2xl p-[8px] text-center "
             >
               <AddIcon className="newadd" /> Add New
             </Link>
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
             <input
               className="p-[6px] rounded-2xl summary-border text-[13px] w-[140px]"
               type="text"
@@ -197,8 +190,4 @@ const Project_Summary = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ProjectSummary;
-=======
 export default Project_Summary;
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04

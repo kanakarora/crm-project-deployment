@@ -6,7 +6,6 @@ import "../src/Assets/css/subscribe.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import NavBar from "./Admin/Components/NavBar";
 import SideBar from "./Admin/Components/SideBar";
-import Project from "./Admin/pages/Projects/Project_Data";
 import Role from "./Admin/pages/Roles/RoleDetails";
 import Department from "./Admin/pages/Department/DepartmentDetails";
 import AddRole from "./Admin/pages/Roles/Add_Role";
@@ -28,20 +27,14 @@ import UpperHeader from "./Admin/pages/editstaff/UpperHeader";
 import SidebarEditStaff from "../src/Admin/pages/editstaff/SidebarEditStaff";
 import Salary_Details from "../src/Admin/pages/StaffSection/Salary_Details";
 import MultiStepForm from "../src/Admin/pages/authentication/steps/steps/multistepform";
-import Attendence_summary from "./Admin/pages/StaffSection/Attendance/Attendence_summary";
 import Worktime from "./Admin/pages/StaffSection/Attendance/Worktime";
 import Reviewfine from "./Admin/pages/StaffSection/Attendance/Reviewfine";
 import Overtime from "./Admin/pages/StaffSection/Attendance/Overtime";
-import Project_Summary from "./Admin/pages/Projects/Project_Summary";
-<<<<<<< HEAD
+// import Project_Summary from "./Admin/pages/Projects/Project_Summary";
 import Project_Setting from "./Admin/pages/Projects/ProjectSettings";
-import Taskview from "./Admin/pages/Tasks/Taskview";
 import Task from "./Admin/pages/Projects/Task";
-=======
 import ProjectsOverview from "../src/Admin/pages/Projects/Project_overview";
-import Projects from '../src/Admin/pages/Projects/Projects';
 import Taskview from "./Admin/pages/Tasks/Taskview";
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
 import Clients from "./Admin/pages/Clients/Clients";
 import NewTicket from "../src/Admin/pages/Projects/NewTicketForm";
 import Add_Project from "../src/Admin/pages/Projects/Add_Project";
@@ -59,13 +52,10 @@ import Edit_Task_Status from "./Admin/pages/Projects/Edit_Task_Status";
 import Edit_Project from "./Admin/pages/Projects/Edit_Project";
 import Project_Progress from "../src/Clients/Project_Progress";
 import ProjectData from "./Admin/pages/Projects/Project_Data";
-import CustomDialog from "./Admin/pages/Clients/DialougeBox";
-import Note from "./Admin/Components/checkingCode";
 import Meeting from "./Admin/pages/Calender/Meeting";
 import CalenderDay from "./Admin/pages/Calender/CalenderDay";
 import CalenderYear from "./Admin/pages/Calender/CalenderYear";
-<<<<<<< HEAD
-import ExpensePage from "../src/Admin/Expenses/Expense";
+// import ExpensePage from "../src/Admin/Expenses/Expense";
 import AddNewClient from "./Admin/pages/Clients/AddNewClient";
 import EditClient from "./Admin/pages/Clients/EditClient";
 import Subscription from './Admin/pages/Subscription Plan/Subscription';
@@ -73,22 +63,17 @@ import AddNewTask from "./Admin/pages/Projects/AddNewTask";
 import ProjectSummary from "./Admin/pages/Projects/Project_Summary";
 import ProjectOverView from "./Admin/pages/Projects/Project_overview";
 import Attendence_Summary from "./Admin/pages/StaffSection/Attendance/Attendence_summary";
-
-
-
-=======
 import Note from "../src/Notes/Note";
-import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
-import ExpensePage from "./Admin/ExpensesClient/ExpensePage";
-import AddNewClient from "./Admin/pages/Clients/AddNewClient";
-import EditClient from "./Admin/pages/Clients/EditClient";
-import Subscription from './Admin/pages/Subscription Plan/Subscription'
-import Buy_plan from './Admin/pages/Subscription Plan/Pricing Plans/Plan'
 import CalenderWeekly from '../src/Admin/pages/Calender/CalenderWeekly'
-import Task from "./Admin/pages/Tasks/Task";
 import ClientHeader from "./Client_Panel/ClientHeader";
 import SidebarClient from "./Client_Panel/SidebarClient";
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
+import CustomDialog from "./Admin/pages/Clients/DialougeBox";
+import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
+import NewTask from "./Admin/pages/Tasks/Task_deatail/NewTask";
+
+
+
+
 
 const App = () => {
   const [toggleSideBar, setToggleSideBar] = useState(true);
@@ -173,7 +158,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-<<<<<<< HEAD
         
         <Route path = "/" element={<AdminLayout />}>
         
@@ -185,20 +169,17 @@ const App = () => {
           <Route path="/addnewclient" element={<AddNewClient />} />
           <Route path="/editclient" element={<EditClient />} />
            <Route path="/addrole" element={<AddRole />} />
-           <Route path="/taskview" element={<Taskview />} />
-=======
-        <Route element={<AdminLayout />}>
-          <Route path="/project-overview" element={<ProjectsOverview />} />
+           <Route path="/project-overview" element={<ProjectsOverview />} />
           <Route path="/new-ticket" element={<NewTicket />} />
           <Route path="/addnewclient" element={<AddNewClient />} />
           <Route path="/editclient" element={<EditClient />} />
           <Route path="/addrole" element={<AddRole />} />
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
           <Route path="/role" element={<Role />} />
           <Route path="/editrole" element={<EditRole />} />
           <Route path="/editdepartment" element={<EditDepartment />} />
           <Route path="/add-one-staff" element={<AddOneStaff />} />
           <Route path="/department" element={<Department />} />
+          <Route path="/adddepartment" element={<AddDepartment/>} />
           <Route path="/salary_Details" element={<Salary_Details />} />
           <Route path="/overtime" element={<Overtime />} />
           <Route path="/reviewfine" element={<Reviewfine />} />
@@ -221,7 +202,6 @@ const App = () => {
           <Route path = "/dialougebox" element = {<CustomDialog/>}/>
           <Route path = "/Note" element = {<Note/>}/>
           {/* <Route path="/taskdata" element={<Task_Data />} /> */}
-<<<<<<< HEAD
            <Route path="/add-department" element={<AddDepartment/>}/>
           <Route path="/calender" element={<Calender/>}/>
           <Route path="/meeting" element={<Meeting/>}/>
@@ -229,19 +209,13 @@ const App = () => {
           <Route path="/year-wise" element={<CalenderYear/>}/>
           <Route path = "/addnewtask" element = {<AddNewTask/>}/>
           <Route path="/create-new-project" element={<Add_Project />}/>
-=======
           <Route path="/add-department" element={<AddDepartment />} />
-
-
-
-
-          <Route path="/create-new-project" element={<Add_Project />}></Route>
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
           <Route path="/add-department" element={<AddDepartment />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
           <Route path="/edit-project" element={<Edit_Project />} />
           <Route path="/task" element={<Task />} />
+          <Route path = "/newtask" element = {<NewTask/>}/>
           <Route path="/editprofile" element={<Editprofile />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
@@ -249,13 +223,8 @@ const App = () => {
           <Route path="/projectprogress" element={<Project_Progress />} />
           <Route path="/note" element={<Note />} />
           <Route path="/expenseedit" element={<ExpenseEdit />} />
-          <Route path="/expensepage" element={<ExpensePage />} />
-<<<<<<< HEAD
-=======
-
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
+          {/* <Route path="/expensepage" element={<ExpensePage />} /> */}
           <Route path="/subscription-plan" element={<Subscription/>}/>
-          <Route path="/subscription-plan/buy-plan" element={<Buy_plan/>}/>
         </Route>
 
         <Route element={<Editstaff />}>
@@ -270,24 +239,19 @@ const App = () => {
           <Route path="/edit-penalty" element={<EditPenalty />} />
           <Route path="/salary-overview" element={<SalaryOverview />} />
           <Route path="/staff-salary-summary" element={<StaffSalarySummry />} />
-<<<<<<< HEAD
-=======
           <Route path="/calender" element={<Calender />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/day-wise" element={<CalenderDay />} />
           <Route path="/year-wise" element={<CalenderYear />} />
           <Route path="/week-wise" element={<CalenderWeekly />} />
 
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
           <Route
             path="/background-verification"
             element={<BackgroundVerification />}
           />
           <Route path="/verify-aadhar" element={<VerifyAadhaar />} />
-<<<<<<< HEAD
           </Route>
          <Route element={<AuthLayout />}>
-=======
      
         </Route>
         <Route element={<Client_Panel />}>
@@ -309,19 +273,15 @@ const App = () => {
 
  
         <Route element={<AuthLayout />}>
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
           <Route path="/authentication" element={<MultiStepForm />} />
         </Route>
         <Route element={<CustomerPanel />}>
           <Route path="/customer-panel"></Route>
-<<<<<<< HEAD
           </Route>
-=======
-
-        </Route>
 
 
->>>>>>> dac7b45bc5c2f7590ca831a66306446717531e04
+
+
 
       </Routes>
     </BrowserRouter>

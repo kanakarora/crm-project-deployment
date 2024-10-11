@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddDepartment = () => {
+  const navigate = useNavigate();
+
     return (
         <div className='addnewrole absolute top-[95px] pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
             <h2>Add New Department</h2>
@@ -134,7 +137,7 @@ const AddDepartment = () => {
 
 
                 <div className='text-end mt-3'>
-                    <button className='bg-[#511992] pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]'>Save</button>
+                    <button className='bg-[#511992] pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]' onClick = {()=>{navigate("/department")}}>Save</button>
                 </div>
             </div>
         </div>

@@ -3,7 +3,13 @@ import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import CustomDialog from "./DialougeBox";
 import { MdOutlineDone } from "react-icons/md";
+import { useNavigate } from "react-router";
+import { IoMdArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
+
 const AddNewClient = () =>{
+   const navigate = useNavigate();
+
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,6 +55,7 @@ const AddNewClient = () =>{
 <div class="bg-gray-100 flex justify-center items-center min-h-screen">
 
 <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
+   <Link to = "/clients"><button className="w-[10%] flex items-center justify-around bg-purple-400 rounded-full"><IoMdArrowBack/> Back</button></Link>
   <div class="mb-6">
     {/* <!-- Tabs for form sections --> */}
     <nav class="flex space-x-4 border-b">
@@ -203,7 +210,7 @@ const AddNewClient = () =>{
     {/* <!-- Submit Button --> */}
     <div class="mt-6  w-full md:w-[45%] flex p-2 justify-between md:justify-around  md:float-right">
       <button type="submit" class="   px-2 text-gray-400 border border-gray-400 rounded-md shadow-sm  focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 mr-2 ">save and create contact</button>
-      <button type="submit" class=" bg-purple-600 text-white px-2 py-1 rounded-md shadow-sm hover:bg-purple-700 focus:ring-4 focus:ring-black focus:ring-opacity-50">save</button>
+      <button type="submit" class=" bg-purple-600 text-white px-2 py-1 rounded-md shadow-sm hover:bg-purple-700 focus:ring-4 focus:ring-black focus:ring-opacity-50" onClick={()=>{navigate("/clients")}}>save</button>
     </div>
   </form>
   {/* <!-- Form ends --> */}

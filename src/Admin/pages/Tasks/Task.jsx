@@ -77,7 +77,7 @@ const Task = () => {
                            
 
 
-                            <td className="flex flex-col w-[250px] p-[10px] break-words"><Link className="text-[11px] text-[#2563eb]" to="/">soul relation intro</Link> <Link className="text-[9px] text-[#000]" to="/">#12 - DIVINE HEALING-AUG-2024 - DIVINE HEALING</Link></td>
+                            <td className="flex flex-col w-[250px] p-[10px] break-words"><Link className="text-[11px] text-[#2563eb]" to="/taskview">soul relation intro</Link> <Link className="text-[9px] text-[#000]" to="/">#12 - DIVINE HEALING-AUG-2024 - DIVINE HEALING</Link></td>
 
 
 
@@ -110,7 +110,7 @@ const Task = () => {
                            
 
 
-                            <td className="flex flex-col w-[250px] p-[10px] break-words"><Link className="text-[11px] text-[#2563eb]" to="/">URBAN KHALSA REEL</Link> <Link className="text-[9px] text-[#000]" to="/">#8 - URBAN KHALSA - URBAN KHALSA</Link></td>
+                            <td className="flex flex-col w-[250px] p-[10px] break-words"><Link className="text-[11px] text-[#2563eb]" to="/taskview">URBAN KHALSA REEL</Link> <Link className="text-[9px] text-[#000]" to="/">#8 - URBAN KHALSA - URBAN KHALSA</Link></td>
 
 
 
@@ -150,7 +150,7 @@ const Task = () => {
             <div className="bg-[#fff] p-[10px] pl-[100px]">
                 <div className="mb-[14px]">
 
-                    <Link to="/" className="text-[#fff] text-[14px] bg-[#8a25b0] mb-[10px]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <Link to="/newtask" className="text-[#fff] text-[14px] bg-[#8a25b0] mb-[10px]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <AddIcon /> New Task</Link>
                 </div>
                 {accordionItems.map((item, index) => (
