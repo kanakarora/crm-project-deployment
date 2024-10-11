@@ -70,6 +70,7 @@ import SidebarClient from "./Client_Panel/SidebarClient";
 import CustomDialog from "./Admin/pages/Clients/DialougeBox";
 import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
 import NewTask from "./Admin/pages/Tasks/Task_deatail/NewTask";
+import NewSideBar from "./Admin/Components/newsidebar";
 
 
 
@@ -97,7 +98,7 @@ const App = () => {
       <>
         <div className="flex">
           <div className="">
-            {toggleSideBar && <SideBar toggleSideBar={toggleSideBar} />}
+            {toggleSideBar && <NewSideBar toggleSideBar={toggleSideBar} />}
           </div>
 
           {/* container for navbar and outlet */}

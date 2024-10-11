@@ -52,7 +52,7 @@ const AddNewClient = () => {
 
 
   return (
-    <div class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-gray-100 flex justify-center items-center min-h-screen mt-4">
 
       <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
         <button className="w-[5%] flex items-center justify-center float-right rounded-full " onClick={() => navigate('/clients')}>
