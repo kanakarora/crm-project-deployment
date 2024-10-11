@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const EditClient = () =>{
+  const [selectAll, setSelectAll] = useState(false);
+  const [selectedFields, setSelectedFields] = useState([]);
+
   return (
     <div class=" flex justify-center items-center min-h-screen">
 

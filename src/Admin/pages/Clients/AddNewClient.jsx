@@ -6,21 +6,44 @@ import { MdOutlineDone } from "react-icons/md";
 const AddNewClient = () =>{
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [defaultLanguages , setDefaultLanguages] = useState(["portuguese","German","indonesia","catlan" , "Spanish" , "Turkish" , "Slovak" , "Vitnamese" , "Swedish" , "Portguese_br"])
+
+
+  const [defaultLanguages , setDefaultLanguages] = useState(["portuguese","German","indonesia","catlan" , "Spanish" , "Turkish" , "Slovak" , "Vitnamese" , "Swedish" , "Portguese_br","ukrainian","polish"])
   const [toggleCurrencyDropdown , setToggleCurrencyDropDown] = useState(false);
 
   const handleToggleCurrencyDropDown = () =>{
     setToggleCurrencyDropDown(!toggleCurrencyDropdown)
   }
 
+  const [selectAll, setSelectAll] = useState(false);
+  const [selectedGroups, setSelectedGroups] = useState([]);
+
   const groups = [
-    { id: 1, name: 'ASTROPITAH SMM PROJECT' },
-    { id: 2, name: 'digital' },
-    { id: 3, name: 'HONEY TOUR & TRAVELS' },
-    { id: 4, name: 'vevge' },
-    { id: 5, name: 'webs' }
-  ];
-  
+    'ASTROPITAH SMM PROJECT' ,
+      'digital' ,
+   'HONEY TOUR & TRAVELS' ,
+     'vevge' ,
+   'webs' 
+  ]
+
+  const handleGroupSelection = (selectAll) => {
+    if(selectAll){
+      setSelectedGroups(groups);//select all group
+      setSelectAll(true);
+    }
+    else {
+      setSelectedGroups([]); //deselect all group
+      setSelectAll(false);
+    }
+  };
+  const toggleGroupSelection = (group) => {
+    setSelectedGroups((prevSelected) => 
+      prevSelected.includes(group)
+        ? prevSelected.filter(g => g !== group)
+        : [...prevSelected, group]
+    );
+  };
+
 
   return(
 <div class="bg-gray-100 flex justify-center items-center min-h-screen">
@@ -84,18 +107,19 @@ const AddNewClient = () =>{
         <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
           <div className="border-b border-gray-200">
             <div className="flex justify-between px-4 py-2 text-sm text-black-600">
-              <button className="hover:underline border border-gray-200 w-1/2 py-2">Select All</button>
-              <button className="hover:underline border border-gray-200 w-1/2 py-2">Deselect All</button>
+              <button className="hover:underline border border-gray-200 w-1/2 py-2" onClick={()=>handleGroupSelection(true)}>Select All</button>
+              <button className="hover:underline border border-gray-200 w-1/2 py-2" onClick={()=>handleGroupSelection(false)}>Deselect All</button>
             </div>
           </div>
           <ul className="max-h-60 overflow-auto">
             {groups.map(group => (
               <li 
-                key={group.id}
+              onClick={() => toggleGroupSelection(group)}
+                key={group}
                 className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
               >
-                <span className="text-sm">{group.name}</span>
-                {group.selected && <MdOutlineDone className="h-4 w-4 text-blue-600" />}
+                <span className="text-sm">{group}</span>
+                {selectedGroups.includes(group) && <MdOutlineDone  className="text-xl" />}
               </li>
             ))}
           </ul>
@@ -120,9 +144,12 @@ const AddNewClient = () =>{
   {toggleCurrencyDropdown &&<div class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
     <div class="py-1" role="none">
       {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-      <input type="text" className="border border-blue-400 outline-none rounded-lg w-[80%] mx-9"/>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">USD $</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">INR Rs.</a>
+      <input type="text" className="border border-blue-400 py-1 outline-none rounded-lg w-full mb-5 bg-gray-100"/>
+      <ul>
+      <li href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100" role="menuitem" tabindex="-1" id="menu-item-1">USD $</li>
+      <li href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100" role="menuitem" tabindex="-1" id="menu-item-2">INR Rs.</li>
+      </ul>
+     
     </div>
   </div>
 }
@@ -174,9 +201,9 @@ const AddNewClient = () =>{
     </div>
 
     {/* <!-- Submit Button --> */}
-    <div class="mt-6  w-full md:w-[40%] flex p-2 justify-around  md:float-right">
-      <button type="submit" class="   p-2 text-gray-400 border border-gray-400 rounded-md shadow-sm h focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 ">save and create contact</button>
-      <button type="submit" class=" bg-blue-600 text-white p-2 px-3 rounded-md shadow-sm hover:bg-blue-700 focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">save</button>
+    <div class="mt-6  w-full md:w-[45%] flex p-2 justify-between md:justify-around  md:float-right">
+      <button type="submit" class="   px-2 text-gray-400 border border-gray-400 rounded-md shadow-sm  focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 mr-2 ">save and create contact</button>
+      <button type="submit" class=" bg-purple-600 text-white px-2 py-1 rounded-md shadow-sm hover:bg-purple-700 focus:ring-4 focus:ring-black focus:ring-opacity-50">save</button>
     </div>
   </form>
   {/* <!-- Form ends --> */}
