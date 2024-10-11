@@ -210,6 +210,17 @@ const App = () => {
           <Route path = "/addnewtask" element = {<AddNewTask/>}/>
           <Route path="/create-new-project" element={<Add_Project />}/>
           <Route path="/add-department" element={<AddDepartment />} />
+          <Route path="/calender" element={<Calender />} />
+          <Route path="/meeting" element={<Meeting />} />
+          <Route path="/day-wise" element={<CalenderDay />} />
+          <Route path="/year-wise" element={<CalenderYear />} />
+          <Route path="/week-wise" element={<CalenderWeekly />} />
+
+
+
+
+
+          <Route path="/create-new-project" element={<Add_Project />}/>
           <Route path="/add-department" element={<AddDepartment />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
@@ -225,8 +236,7 @@ const App = () => {
           <Route path="/expenseedit" element={<ExpenseEdit />} />
           {/* <Route path="/expensepage" element={<ExpensePage />} /> */}
           <Route path="/subscription-plan" element={<Subscription/>}/>
-        </Route>
-
+        {/* </Route> */}
         <Route element={<Editstaff />}>
           <Route path="/personal-detail" element={<PersonalDetail />} />
           <Route path="/bank-detail" element={<BankDetails />} />
@@ -239,12 +249,7 @@ const App = () => {
           <Route path="/edit-penalty" element={<EditPenalty />} />
           <Route path="/salary-overview" element={<SalaryOverview />} />
           <Route path="/staff-salary-summary" element={<StaffSalarySummry />} />
-          <Route path="/calender" element={<Calender />} />
-          <Route path="/meeting" element={<Meeting />} />
-          <Route path="/day-wise" element={<CalenderDay />} />
-          <Route path="/year-wise" element={<CalenderYear />} />
-          <Route path="/week-wise" element={<CalenderWeekly />} />
-
+          
           <Route
             path="/background-verification"
             element={<BackgroundVerification />}
@@ -278,8 +283,7 @@ const App = () => {
         <Route element={<CustomerPanel />}>
           <Route path="/customer-panel"></Route>
           </Route>
-
-
+         </Route>
 
 
 

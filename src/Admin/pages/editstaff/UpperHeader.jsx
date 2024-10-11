@@ -36,13 +36,13 @@ const UpperHeader = () => {
     }
   
     return (
-        <div className='flex justify-between p-3 border-b shadow-md fixed top-0 w-full z-10	 bg-white'>
+        <div className='flex justify-between p-3 border-b shadow-md fixed top-0 w-full z-[1]	 bg-white'>
             <div className='flex gap-2 items-center'>
                 <button  onClick={toggleSidebar} className="toggle-btn-side">
                 <MenuIcon className="menu-icon"/>
                 <CloseIcon className="close-icon"/>
                  </button>
-                 <Link to='/staff-menu'>
+                 <Link to='/'>
                 <ArrowBackIcon />
                 </Link>
                 <img src={photo} className='h-[40px] w-[40px]' />

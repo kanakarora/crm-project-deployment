@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import profile from '../../../Assets/Images/profile.svg';
 import { useNavigate } from 'react-router-dom';
+
 
 const AddOneStaff = () => {
     const navigate = useNavigate();
@@ -110,8 +110,8 @@ const AddOneStaff = () => {
             <div className='flex justify-end mt-4 p-3'>
            
             <div className='flex gap-[20px] items-center'>
-                <button className='first-btn'>Cancel</button>
-                <button className='second-btn'>Save</button>
+                <button className='first-btn' onClick={() => navigate('/')}>Cancel</button>
+                <button className='second-btn' onClick={() => navigate('/')}>Save</button>
                 
             </div>
 

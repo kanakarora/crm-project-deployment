@@ -87,10 +87,12 @@ const StaffTab = () => {
           <tbody>
             <td><input type='checkbox' className='border border-1 rounded-md '/></td>
             <td>
-              <Link to="/personal-detail" className='text-[#8A25B0] font-medium'>Staff</Link>
+              <Link to="/personal-detail" className='text-[#8A25B0] font-medium'>kanika arora</Link>
             </td>
-            <td>Demo</td>
-            <td>Demo</td>
+            
+            <td><Link to = '/personal-detail'>demo</Link></td>
+            
+            <td>demo</td>
             <td>Demo</td>
             <td>Demo</td>
             <td>Demo</td>
