@@ -118,6 +118,7 @@ const NewSideBar = ({ toggleSideBar }) => {
 
         <div className="">
           <div className="flex items-center gap-[10px] text-white p-[10px] hover:bg-[#fff] rounded-md hover:text-[#8a25b0] transition-all	">
+            <Link to = "/clients">
             <img src={client} alt="" />
             <button
               onClick={toggleMenu2}
@@ -125,7 +126,7 @@ const NewSideBar = ({ toggleSideBar }) => {
             >
               Client
             </button>
-
+            </Link>
           </div>
 
           <div
