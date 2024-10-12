@@ -169,7 +169,6 @@ const App = () => {
           <Route path="/new-ticket" element={<NewTicket />} />
           <Route path="/addnewclient" element={<AddNewClient />} />
           <Route path="/editclient" element={<EditClient />} />
-           <Route path="/addrole" element={<AddRole />} />
            <Route path="/project-overview" element={<ProjectsOverview />} />
           <Route path="/new-ticket" element={<NewTicket />} />
           <Route path="/addnewclient" element={<AddNewClient />} />

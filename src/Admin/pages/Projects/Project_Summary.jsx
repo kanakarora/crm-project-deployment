@@ -126,7 +126,7 @@ const Project_Summary = () => {
     },
   ];
   return (
-    <div className=" w-full absolute pl-[145px] top-[95px] right-[5px] ">
+    <div className=" w-full absolute  top-[95px] right-[5px] ">
       <div className="bg-[#fff] p-[10px] ml-[140px]">
         <div className="mb-[14px]">
         

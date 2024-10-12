@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router'
 
 const AddNewRole = () => {
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
-        <div className='addnewrole  pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
-            <h2>Add New Role</h2>
+        <div className='addnewrole  pl-[10px] w-[100%] pr-2 mb-3 pb-4 '>
+            <h2 className='w-[50%] mx-auto text-left mt-4'>Add New Role</h2>
 
-            <div className='bg-[#f1f5f9] p-3 lg:w-[50%] w-[100%] mt-2 rounded-md'>
+            <div className='bg-white p-3 lg:w-[50%] w-[100%] mt-2 rounded-md border border-gray-200 shadow-lg mx-auto'>
                 <label>Role Name</label><br />
                 <input type='text' className='mt-2 border border-1 pl-3 h-[43px] pr-7
 ] rounded-md focus:outline-none w-[100%] text-[15px] text-[#aeabab]'/>
@@ -83,19 +83,19 @@ const AddNewRole = () => {
                             </td>
                         </tr>
 
-                        <tr className='border border-1'>
-                            <td className='p-3 text-[14px] border-r-[1px] text-[#64748b] font-normal'>Staff </td>
-                            <td className='p-3'>
-                                <input type="checkbox" className='cursor-pointer' id="staff" name="vehicle1" value="Bike" />
-                                <label className='ml-3 text-[13px] cursor-pointer  text-[#64748b] ' for="staff">View Global</label><br />
-                                <input type="checkbox" className='cursor-pointer' id="staff1" name="vehicle2" value="Car" />
-                                <label className='ml-2 cursor-pointer text-[13px]  text-[#64748b] ' for="staff1"> Create</label><br />
-                                <input type="checkbox" className='cursor-pointer' id="staff2" name="vehicle3" value="Boat" />
-                                <label className='ml-3 cursor-pointer text-[13px]  text-[#64748b] ' for="staff2">Edit</label><br />
-                                <input type="checkbox" className='cursor-pointer' id="staff3" name="vehicle3" value="Boat" />
-                                <label className='ml-3 cursor-pointer text-[13px]  text-[#64748b] ' for="staff3">Delete</label><br /><br />
-                            </td>
-                        </tr>
+    <tr className='border border-1'>
+    <td className='p-3 text-[14px] border-r-[1px] text-[#64748b] font-normal'>Staff </td>
+    <td className='p-3'>
+        <input type="checkbox" className='cursor-pointer' id="staff" name="vehicle1" value="Bike" />
+        <label className='ml-3 text-[13px] cursor-pointer  text-[#64748b] ' for="staff">View Global</label><br />
+        <input type="checkbox" className='cursor-pointer' id="staff1" name="vehicle2" value="Car" />
+        <label className='ml-2 cursor-pointer text-[13px]  text-[#64748b] ' for="staff1"> Create</label><br />
+        <input type="checkbox" className='cursor-pointer' id="staff2" name="vehicle3" value="Boat" />
+        <label className='ml-3 cursor-pointer text-[13px]  text-[#64748b] ' for="staff2">Edit</label><br />
+        <input type="checkbox" className='cursor-pointer' id="staff3" name="vehicle3" value="Boat" />
+        <label className='ml-3 cursor-pointer text-[13px]  text-[#64748b] ' for="staff3">Delete</label><br /><br />
+    </td>
+</tr>
 
                         <tr className='border border-1'>
                             <td className='p-3 text-[14px] border-r-[1px] text-[#64748b] font-normal'>Task </td>
@@ -132,7 +132,6 @@ const AddNewRole = () => {
                                 <label className='ml-3 text-[13px] cursor-pointer  text-[#64748b] ' for="chat">Grant Access</label><br />
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
 

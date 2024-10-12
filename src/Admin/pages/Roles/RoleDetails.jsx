@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Main = () => {
   return (
-    <div className=' pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
+    <div className=' pl-[10px] w-[100%] pr-2 mb-3 pb-4 mt-4'>
       <Link to="/addrole" className='bg-[#511992]  p-2 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Role</Link>
 
       <div className='table-section mt-5 bg-white shadow p-4 pl-0 rounded-sm pr-0'>
