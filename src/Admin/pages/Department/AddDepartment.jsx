@@ -137,6 +137,7 @@ const AddDepartment = () => {
 
 
                 <div className='text-end mt-3'>
+                  <button className='text-black pt-2 py-2 pl-5 pr-5 rounded-md  hover:bg-[#7526d1] mr-2 border border-gray-400' onClick = {()=>{navigate("/department")}}>cancel</button>
                     <button className='bg-[#511992] pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]' onClick = {()=>{navigate("/department")}}>Save</button>
                 </div>
             </div>

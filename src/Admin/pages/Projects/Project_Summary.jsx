@@ -26,7 +26,7 @@ const Project_Summary = () => {
     {
       title: (
         <div>
-          <table className="w-full">
+          <table className="w-full ">
             <thead>
               <tr>
                 <th className="text-[12px] font-medium p-[10px] w-[100px] border-r whitespace-nowrap">
@@ -77,7 +77,7 @@ const Project_Summary = () => {
                   onMouseLeave={() => setShowButtons(false)}
                   className="flex flex-col w-[250px] p-[10px] break-words"
                 >
-                  <Link className="text-[11px] text-[#2563eb]" to="/">
+                  <Link className="text-[11px] text-[#2563eb]" to="/projectoverview">
                     soul relation intro
                   </Link>{" "}
                   <Link className="text-[12px] text-[#000]" to="/">
@@ -126,8 +126,10 @@ const Project_Summary = () => {
     },
   ];
   return (
-    <div className=" w-full absolute  top-[95px] right-[5px] ">
-      <div className="bg-[#fff] p-[10px] ml-[140px]">
+    // code changed here
+    <div>
+    <div className=" w-full  relative  top-[50px] right-[5px] ">
+      <div className="bg-[#fff] p-[10px] mx-9">
         <div className="mb-[14px]">
         
         </div>
@@ -186,6 +188,7 @@ const Project_Summary = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

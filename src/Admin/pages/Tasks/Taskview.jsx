@@ -59,7 +59,7 @@ const Taskview = () => {
 
     return (
         <>
-            <div className="w-[100%] flex p[0] view-not">
+            <div className="w-[100%] flex px-4 view-not mx-4 mt-2">
                 <div className="w-[60%] p-[20px] h-[100%] overflow-scroll ">
                     <div className="flex justify-between mb-[20px]">
                         <p className="text-[#8c939f]">Karan / Human Resources</p>

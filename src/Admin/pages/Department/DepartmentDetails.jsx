@@ -10,9 +10,9 @@ import SearchIcon from '@mui/icons-material/Search';
 const DepartmentDetail = () => {
     return (
         <div className='absolute top-[95px] pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
-          <Link to="/adddepartment" className='bg-[#511992]  p-2 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Department</Link>
+          <Link to="/adddepartment" className='bg-[#511992]  p-4 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Department</Link>
     
-          <div className='table-section mt-5 bg-white shadow p-4 pl-0 rounded-sm pr-0'>
+          <div className='table-section mt-5 bg-white shadow p-4 pl-0 rounded-sm pr-0 '>
     
             <div className='flex mb-4 justify-between p-3 flex-col gap-2  sm:flex-row sm:gap-0'>
               <div className='left-side '>
@@ -37,7 +37,7 @@ const DepartmentDetail = () => {
     
               </div>
     
-              <div className='right-side relative  w-[200px]'>
+              <div className='right-side relative  w-[200px] overflow-x-auto'>
                 <input type='text' placeholder='Search' className='border border-1 pl-3 h-[43px] pr-7
     ] rounded-md focus:outline-none w-[100%] text-[15px] text-[#aeabab]' />
                 <SearchIcon className='absolute right-[10px] search-icon    text-[#aeabab]  font-thin text-[#dddddd;

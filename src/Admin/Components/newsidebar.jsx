@@ -44,7 +44,7 @@ const NewSideBar = ({ toggleSideBar }) => {
    
 
   return (
-    <div className="sidebar w-[250px] xl:w-[200px] lg:w-[300px] md:w-[300px] bg-[#27004a] h-full p-[10px] ">
+    <div className="sidebar w-[full] xl:w-[200px]   md:w-[300px] bg-[#27004a] h-full p-[10px]">
 
  
       <div className="flex xl:justify-center lg:justify-center  p-[20px]">
@@ -90,7 +90,7 @@ const NewSideBar = ({ toggleSideBar }) => {
         <div className="">
           <div className="flex items-center gap-[10px] text-white p-[10px] hover:bg-[#fff] rounded-md hover:text-[#8a25b0] transition-all	">
             <img src={task} alt="" />
-            <Link to = '/taskview'>
+            <Link to = '/task'>
             <button
               onClick={toggleMenu1}
               className=" "
@@ -117,15 +117,16 @@ const NewSideBar = ({ toggleSideBar }) => {
           </div>
         </div>
 
+        
         <div className="">
           <div className="flex items-center gap-[10px] text-white p-[10px] hover:bg-[#fff] rounded-md hover:text-[#8a25b0] transition-all	">
-            <Link to = "/clients">
-            <img src={client} alt="" />
+            <img src={task} alt="" />
+            <Link to = '/clients'>
             <button
               onClick={toggleMenu2}
               className=" "
             >
-              Client
+              clients
             </button>
             </Link>
           </div>

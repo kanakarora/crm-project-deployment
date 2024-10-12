@@ -20,7 +20,7 @@ import Notes from "./Nots";
 import Activity from "./Activity";
 import Calender from "./Calender";
 import People from "./People";
-import Task from './Task'
+import Task from "../Tasks/Task";
 
 const ProjectOverView = () => {
   const [activeTab, setactiveTab] = useState("Overview");
@@ -106,7 +106,7 @@ const ProjectOverView = () => {
   };
 
   return (
-    <div className="">
+    <div className="mx-4 my-2">
       <div>
         <span className="text-[#9A93B3] text-[20px] font-medium max-[600px]:text-[15px]">
           Projects / Addodle

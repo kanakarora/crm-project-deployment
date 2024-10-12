@@ -52,9 +52,9 @@ const AddNewClient = () => {
 
 
   return (
-    <div class="bg-gray-100 flex justify-center items-center min-h-screen mt-4">
+    <div class="flex justify-center items-center min-h-screen mt-7 ">
 
-      <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
+      <div class="w-full max-w-3xl bg-white  rounded-lg p-6 border border-gray-200 shadow-lg">
         <button className="w-[5%] flex items-center justify-center float-right rounded-full " onClick={() => navigate('/clients')}>
         <RxCross1 className=" font-bold text-xl"/>
         </button>

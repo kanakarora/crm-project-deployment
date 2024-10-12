@@ -111,7 +111,7 @@ const Attendence_Summary = () => {
         <div className='p-[20px] w-full'>
             <div className='flex  justify-between  '>
                 <div className='flex gap-[10px]'>
-                    <h1 className='font-semibold'>Attendence Summary</h1>
+                    <h1 className='font-semibold '>Attendence Summary</h1>
                     <p className='bg-[#edd0ca] p-[5px] text-[12px] border border-b border-[#e07964] text-[black] rounded-md'> <WarningIcon className='warning-icon text-[14px] text-[red] ' /> Approval pending for other  <Link className='text-[blue] ml-[10px]' to="/">View</Link> </p>
                 </div>
                 <div className='flex gap-[10px]'>
@@ -122,7 +122,7 @@ const Attendence_Summary = () => {
 
             </div>
 
-            <div className='bg-[#f1f1f1] p-[20px] rounded-md mt-[24px] '>
+            <div className='bg-[#f1f1f1] p-[20px] rounded-md mt-[24px] overflow-x-auto'>
 
                 <div className='flex gap-[14px] justify-between items-center  '>
                     <div className='flex '>
@@ -166,10 +166,10 @@ const Attendence_Summary = () => {
 
 
             </div>
-            <div className='bg-[#f1f1f1] p-[20px] rounded-md mt-[24px] flex gap-[10px]'>
-                <Link to="/worktime" className='total-staff text-[blue] w-[12%] text-[14px] font-medium'>Daily Work Entry</Link>
-                <Link to="/reviewfine" className='total-staff text-[blue] w-[4%] text-[14px] font-medium'>Fine</Link>
-                <Link to="/overtime" className=' w-[12%] text-[blue] text-[14px] font-medium'>Overtime</Link>
+            <div className='bg-[#f1f1f1] p-[20px] rounded-md mt-[24px] flex '>
+                <Link to="/worktime" className='total-staff mx-2 text-[blue] w-[12%] text-[14px] font-medium'>Daily Work Entry</Link>
+                <Link to="/reviewfine" className='total-staff mx-4 text-[blue] w-[8%] md:w-[4%] text-[14px] font-medium'>Fine</Link>
+                <Link to="/overtime" className=' w-[12%] mx-4 text-[blue] text-[14px] font-medium'>Overtime</Link>
             </div>
             <div className="relative">
                 <SearchIcon className='absolute top-[34px] right-[7px]' />

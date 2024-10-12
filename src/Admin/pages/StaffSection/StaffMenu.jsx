@@ -17,12 +17,12 @@ import Permission from "./Permisson";
 
 const StaffMenu = () => {
   return (
-    <div className="staff-menu">
+    <div className="staff-menu mx-4 my-3">
       <h3 className="text-[20px]  font-[Nunito]">My Staff</h3>
 
-      <div className="tab-section mt-[30px]">
+      <div className="tab-section overflow-x-auto mt-[30px] w-[100%]">
         <Tabs>
-          <TabList className="flex   w-[100%] overflow-x-scroll gap-[22px] bg-[#FFFFFF]  rounded-[12px]  p-[14px] pb-[4px]  set-shadow ">
+          <TabList className="flex gap-[22px] bg-[#FFFFFF] overflow-x-auto rounded-[12px]  p-[14px] pb-[4px]  set-shadow ">
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
                 <img src={group} />

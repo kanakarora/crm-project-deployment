@@ -30,9 +30,8 @@ import MultiStepForm from "../src/Admin/pages/authentication/steps/steps/multist
 import Worktime from "./Admin/pages/StaffSection/Attendance/Worktime";
 import Reviewfine from "./Admin/pages/StaffSection/Attendance/Reviewfine";
 import Overtime from "./Admin/pages/StaffSection/Attendance/Overtime";
-// import Project_Summary from "./Admin/pages/Projects/Project_Summary";
 import Project_Setting from "./Admin/pages/Projects/ProjectSettings";
-import Task from "./Admin/pages/Projects/Task";
+import Task from "./Admin/pages/Tasks/Task";
 import ProjectsOverview from "../src/Admin/pages/Projects/Project_overview";
 import Taskview from "./Admin/pages/Tasks/Taskview";
 import Clients from "./Admin/pages/Clients/Clients";
@@ -69,7 +68,6 @@ import ClientHeader from "./Client_Panel/ClientHeader";
 import SidebarClient from "./Client_Panel/SidebarClient";
 import CustomDialog from "./Admin/pages/Clients/DialougeBox";
 import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
-import NewTask from "./Admin/pages/Tasks/Task_deatail/NewTask";
 import NewSideBar from "./Admin/Components/newsidebar";
 
 
@@ -97,17 +95,18 @@ const App = () => {
     return (
       <>
         <div className="flex">
-          <div className="">
+          {/* now the sidebar is responsive */}
+          <div className="min-h-screen">
             {toggleSideBar && <NewSideBar toggleSideBar={toggleSideBar} />}
           </div>
 
           {/* container for navbar and outlet */}
-          <div className={`flex flex-col flex-grow overflow-hidden`}>
+          <div className='flex flex-col flex-grow overflow-hidden max-w-screen'>
             <NavBar
               handleToggleSideBar={handleToggleSideBar}
               toggleSideBar={toggleSideBar}
             />
-            <main style = {{margin:0}} className='flex-1 overflow-x-hidden overflow-y-auto  my-[15px] xl:m-[30px]'>
+            <main style = {{margin:0}} className='flex-1 overflow-x-auto overflow-y-auto  my-[15px] xl:m-[30px]'>
               <div className="mx-auto px-4 pl-3 pr-3 py-8 lg:px-4 view-not">
                 <Outlet />
               </div>
@@ -215,18 +214,12 @@ const App = () => {
           <Route path="/day-wise" element={<CalenderDay />} />
           <Route path="/year-wise" element={<CalenderYear />} />
           <Route path="/week-wise" element={<CalenderWeekly />} />
-
-
-
-
-
-          <Route path="/create-new-project" element={<Add_Project />}/>
+         <Route path="/create-new-project" element={<Add_Project />}/>
           <Route path="/add-department" element={<AddDepartment />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
           <Route path="/edit-project" element={<Edit_Project />} />
           <Route path="/task" element={<Task />} />
-          <Route path = "/newtask" element = {<NewTask/>}/>
           <Route path="/editprofile" element={<Editprofile />} />
           <Route path="/taskstatus" element={<Task_Status />} />
           <Route path="/edittaskstatus" element={<Edit_Task_Status />} />
