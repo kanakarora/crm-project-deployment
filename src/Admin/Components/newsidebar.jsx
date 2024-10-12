@@ -60,7 +60,7 @@ const NewSideBar = ({ toggleSideBar }) => {
         <div className="">
           <div className="flex items-center gap-[10px] text-white p-[10px] hover:bg-[#fff] rounded-md hover:text-[#8a25b0] transition-all	">
             <img src={project} alt="" />
-            <Link to = 'projectsummary'>
+            <Link to = '/projectsummary'>
             <button
               onClick={toggleMenu}
               className=" "
@@ -90,13 +90,14 @@ const NewSideBar = ({ toggleSideBar }) => {
         <div className="">
           <div className="flex items-center gap-[10px] text-white p-[10px] hover:bg-[#fff] rounded-md hover:text-[#8a25b0] transition-all	">
             <img src={task} alt="" />
+            <Link to = '/taskview'>
             <button
               onClick={toggleMenu1}
               className=" "
             >
               Task
             </button>
-
+            </Link>
           </div>
 
           <div
