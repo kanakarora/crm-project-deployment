@@ -107,7 +107,7 @@ const App = () => {
               handleToggleSideBar={handleToggleSideBar}
               toggleSideBar={toggleSideBar}
             />
-            <main className={`flex-1 overflow-x-hidden overflow-y-auto  m-[15px] xl:m-[30px]   `}>
+            <main style = {{margin:0}} className='flex-1 overflow-x-hidden overflow-y-auto  my-[15px] xl:m-[30px]'>
               <div className="mx-auto px-4 pl-3 pr-3 py-8 lg:px-4 view-not">
                 <Outlet />
               </div>
@@ -121,8 +121,8 @@ const App = () => {
   function Editstaff() {
     return (
       <>
-        <div className="">
-          <UpperHeader />
+        <div className="my-5">
+          <UpperHeader className = '' />
           <div className="flex">
             <SidebarEditStaff />
             <Outlet />
