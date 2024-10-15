@@ -30,7 +30,7 @@ const StaffMenu = () => {
               </div>
             </Tab>
             <Tab>
-              <div className="flex items-center  whitespace-nowrap mr-[20px]">
+              <div className="flex items-center  whitespace-nowrap mr-[20px] ">
                 <img src={attendance} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
                   Attendance{" "}

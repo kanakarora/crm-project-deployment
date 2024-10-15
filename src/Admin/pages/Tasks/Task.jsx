@@ -174,14 +174,14 @@ const Task = () => {
       <div className="bg-[#fff] p-[10px] mt-7 mx-2">
         <div className="mb-[14px]">
           <Link
-            to="/newtask"
+            to="/addnewtask"
             className="text-[#fff] text-[14px]  mb-[10px]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  p-[8px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 bg-purple-500"
           >
             <AddIcon /> New Task
           </Link>
         </div>
         {accordionItems.map((item, index) => (
-          <div key={index} className="">
+          <div key={index} className="overflow-x-auto">
             {/* Accordion Header */}
             <button
               onClick={() => handleToggle(index)}

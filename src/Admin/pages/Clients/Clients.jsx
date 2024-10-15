@@ -144,76 +144,52 @@ const Clients = () => {
                         <PersonIcon className="newadd mr-[5px]" />Contacts</Link>
                 </div>
 
-                <div className="p-[20px] summary-border w-full">
+        <div className="p-[20px] summary-border w-full">
                     <h2 className="font-medium mb-[10px] flex gap-[6px] items-center"> <LibraryBooksIcon />Clients Summary</h2>
 
-                    <div className="flex items-center gap-[14px] mb-[10px]">
+        <div className="flex items-center gap-[14px] mb-[10px]">
                         
-                        <input className="p-[6px] rounded-2xl summary-border text-[13px] w-[140px]" type="text" placeholder="Search......." />
+        <input className="p-[6px] rounded-2xl summary-border text-[13px] w-[140px]" type="text" placeholder="Search......." />
 
-                    </div>
-                    <div className="flex justify-between items-center">
-                        <div className="flex gap-[10px]">
-                            <div className="relative inline-block text-left">
-                                {/* Button to open/close the dropdown */}
-                                <button
-                                    className=" items-center p-[6px] text-left text-[12px] text-sm font-normal text-[black] select-pe  rounded-md  focus:outline-none"
-                                    onClick={toggleDropdown1}
-                                >
-                                    25 <KeyboardArrowDownIcon className="newadd" />
-                                </button>
+        </div>
+        <div className="flex justify-between items-center">
+        <div className="flex gap-[10px]">
+        <div className="relative inline-block text-left">
+        {/* Button to open/close the dropdown */}
+        <button className=" items-center p-[6px] text-left text-[12px] text-sm font-normal text-[black] select-pe  rounded-md  focus:outline-none" 
+        onClick={toggleDropdown1}>  25 <KeyboardArrowDownIcon className="newadd" />
+        </button>
 
-                                {/* Dropdown menu */}
-                                {isOpen1 && (
-                                    <div className="absolute right-0 w-[100%] z-10 mt-2  origin-top-right left-[0px] bg-white border border-gray-200 rounded-md shadow-lg">
-                                        <div className="" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                            <a
-                                                href="#"
-                                                className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100"
-                                                role="menuitem"
-                                            >
-                                                30
-                                            </a>
-                                            <a
-                                                href="#"
-                                                className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100"
-                                                role="menuitem"
-                                            >
-                                                40
-                                            </a>
-                                            <a
-                                                href="#"
-                                                className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100"
-                                                role="menuitem"
-                                            >
-                                                50
-                                            </a>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                            <p className="  p-[7px] text-[12px] w-[55px] font-medium summary-border rounded-md  "> Export </p>
+        {/* Dropdown menu */}
+        {isOpen1 && (
+        <div className="absolute right-0 w-[100%] z-10 mt-2  origin-top-right left-[0px] bg-white border border-gray-200 rounded-md shadow-lg">
+        <div className="" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <a href="#" className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100"
+        role="menuitem">30</a>
+            <a href="#" className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100" role="menuitem">40
+                                            </a>                                
+        <a href="#" className="block p-[5px] text-center text-sm text-gray-700 hover:bg-gray-100"
+        role="menuitem">50</a>
+        </div>
+        </div>)}
+        </div>
+        <p className="  p-[7px] text-[12px] w-[55px] font-medium summary-border rounded-md  "> Export </p>
 
-                            <p className=" relative p-[7px] text-[12px] w-[116px] font-medium summary-border rounded-md  "> Bulk Actions <CachedIcon className="absolute cursor-pointer right-[5px] top-[9px] newadd2" /> </p>
-
-                        </div>
-                        <div className="relative">
-                            <input className="p-[6px] rounded-2xl  summary-border text-[13px] " type="text" placeholder=" Search......." />
-                            <SearchIcon className="absolute newadd2 right-[8px] top-[8px]" />
-                        </div>
-                    </div>
+        <p className=" relative p-[7px] text-[12px] w-[116px] font-medium summary-border rounded-md  "> Bulk Actions <CachedIcon className="absolute cursor-pointer right-[5px] top-[9px] newadd2" /> </p>
+  </div>
+<div className="relative">
+<input className="p-[6px] rounded-2xl  summary-border text-[13px] " type="text" placeholder=" Search......." />
+<SearchIcon className="absolute newadd2 right-[8px] top-[8px]" />
+</div>
+</div>
+</div>
 
 
-                </div>
-
-
-                {accordionItems.map((item, index) => (
-                    <div key={index} className="border-b border-gray-200">
+{accordionItems.map((item, index) => (
+<div key={index} className="border-b border-gray-200 overflow-x-auto">
                         {/* Accordion Header */}
-                        <button
-                            onClick={() => handleToggle(index)}
-                            className="flex justify-between items-center w-full text-left text-gray-800 bg-gray-100 hover:bg-gray-200 focus:outline-none"
-                        >
+<button onClick={() => handleToggle(index)}
+                            className="flex justify-between items-center w-full text-left text-gray-800 bg-gray-100 hover:bg-gray-200 focus:outline-none">
                             <span>{item.title}</span>
 
                         </button>

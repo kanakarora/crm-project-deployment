@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const AddNewTask = ({ onClose, onSave }) => {
   const [closeBtn, setCloseBtn] = useState(false);
@@ -254,14 +255,15 @@ const AddNewTask = ({ onClose, onSave }) => {
 
               <div className="flex gap-6 justify-end border-t border-[#B1B1B1] mt-14">
                 <div className="pt-5 space-x-8 flex justify-end">
+                  <Link to = '/task'>
                   <button
-                    onClick={handleClosebtn}
+                    // onClick={handleClosebtn}
                     type="button"
                     className="px-6 py-2 text-[#511992] border-[#511992] border rounded-lg"
                   >
                     Close
                   </button>
-
+                  </Link>   
                   <button
                     type="submit"
                     className="px-5 py-2 bg-[#511992] border-[#511992] border text-white rounded-lg"
