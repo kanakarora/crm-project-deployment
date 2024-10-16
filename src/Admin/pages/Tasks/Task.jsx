@@ -181,7 +181,7 @@ const Task = () => {
           </Link>
         </div>
         {accordionItems.map((item, index) => (
-          <div key={index} className="overflow-x-auto">
+          <div key={index} className="">
             {/* Accordion Header */}
             <button
               onClick={() => handleToggle(index)}

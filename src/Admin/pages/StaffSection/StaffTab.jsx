@@ -62,8 +62,8 @@ const StaffTab = () => {
       </div>
 
 
-      <div className=' flex rounded-md shadow  border border-1 mt-4 pl-3 pr-3 overflow-x-auto'>
-        <table className='table-section mt-4  '>
+      <div className='w-[100%] flex rounded-md shadow overflow-scroll border border-1 mt-4 pl-3 pr-3'>
+        <table className='table-section mt-4'>
           <thead className='border border-1 '>
             <th>#</th>
             <th>Name</th>

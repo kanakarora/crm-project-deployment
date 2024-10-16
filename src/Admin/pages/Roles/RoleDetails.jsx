@@ -6,7 +6,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CachedIcon from '@mui/icons-material/Cached';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Role = () => {
+const Main = () => {
   return (
     <div className=' pl-[10px] w-[100%] pr-2 mb-3 pb-4 mt-4'>
       <Link to="/addrole" className='bg-[#511992]  p-2 pr-3 rounded-lg text-white hover:bg-[#7526d1]'> <AddIcon /> New Role</Link>
@@ -106,9 +106,9 @@ const Role = () => {
 
           </tbody>
         </table>
-        <div className='flex justify-center text-center sm:justify-between p-3 pt-5 w-[100%] items-center  flex-col gap-2  sm:flex-row sm:gap-0'>
-          <p className=' text-[#a5a1a1] text-[14px] text-center'>Showing 1 to 7 of 7 entries </p>
-          <div className='pagination flex gap-2 border pt-0 pl-4 pb-0 pr-4 rounded-md text-center -ml-2'>
+        <div className='flex justify-between p-3 pt-5 w-[100%] items-center  flex-col gap-2  sm:flex-row sm:gap-0'>
+          <p className=' text-[#a5a1a1] text-[14px]'>Showing 1 to 7 of 7 entries </p>
+          <div className='pagination flex gap-2 border pt-0 pl-4 pb-0 pr-4 rounded-md'>
             <Link to="#" className='text-[12px]  pt-2 pb-[8px]'>Previous</Link>
             <span className='text-[12px] bg-[#511992] flex items-center  text-white pl-3 pr-3 '>1</span>
             <Link to="#" className='text-[12px]  pt-2 pb-[8px] '>Next</Link>
@@ -121,4 +121,4 @@ const Role = () => {
   )
 }
 
-export default Role;
+export default Main;
