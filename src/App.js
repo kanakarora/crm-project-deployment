@@ -68,7 +68,8 @@ import ClientHeader from "./Client_Panel/ClientHeader";
 import SidebarClient from "./Client_Panel/SidebarClient";
 import CustomDialog from "./Admin/pages/Clients/DialougeBox";
 import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
-import NewSideBar from "./Admin/Components/newsidebar";
+import SideBar from "./Admin/Components/SideBar";
+
 
 
 
@@ -97,7 +98,7 @@ const App = () => {
         <div className="flex">
           {/* now the sidebar is responsive */}
           <div className="min-h-screen">
-            {toggleSideBar && <NewSideBar toggleSideBar={toggleSideBar} />}
+            {toggleSideBar && <SideBar toggleSideBar={toggleSideBar} />}
           </div>
 
           {/* container for navbar and outlet */}
