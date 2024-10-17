@@ -3,11 +3,10 @@ import React from 'react';
 import { useContext } from 'react';
 import { CiImageOn } from "react-icons/ci";
 
-const Step5 = () => {
+const Step4 = () => {
   const { nextStep } = useContext(FormContext);
 
   return (
-
     // create the profile page
     <div className="min-h-screen flex flex-col items-center justify-center p-4 relative bg-purple-500">
       
@@ -47,4 +46,4 @@ const Step5 = () => {
   );
 };
 
-export default Step5;
+export default Step4;

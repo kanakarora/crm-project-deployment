@@ -8,7 +8,7 @@ const AddOneStaff = () => {
     const navigate = useNavigate();
   return (
     <div className='add-one-staff'>
-       <div onClick={()=>{navigate("/")}}><KeyboardBackspaceIcon/>Add Staff</div>
+       <div onClick={()=>{navigate("/")}} className='ml-[100px] bg-purple-700 text-white w-[150px] rounded-full p-3 text-center'><KeyboardBackspaceIcon/>Add Staff</div>
         <form className=' w-[100%] xl:w-[80%] m-auto mt-[60px] shadow-md  xl:p-[24px] p-[12px] border rounded-md  border-1' >
             <div className='flex w-[100%] gap-[10px] justify-between  xl:mb-4 mb-[6px] xl:flex-row flex-col'>
                 <div className='w-[100%] xl:w-[48%] 2xl:w-[48%]  '>

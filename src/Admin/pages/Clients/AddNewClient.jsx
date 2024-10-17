@@ -224,4 +224,3 @@ const AddNewClient = () => {
 
 export default AddNewClient;
 
-

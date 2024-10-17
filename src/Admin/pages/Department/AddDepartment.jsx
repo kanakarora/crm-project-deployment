@@ -1,14 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
+
+
 
 const AddDepartment = () => {
   const navigate = useNavigate();
 
     return (
-        <div className='addnewrole absolute top-[95px] pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
-            <h2 className='w-[50%] mx-auto text-left mt-4'>Add New Department</h2>
+        <div className='addnewrole  pl-[10px] w-[100%] pr-2 mb-3 pb-4'>
+            <h2 className='xl:w-[50%] xl:m-auto'>Add New Department</h2>
 
-            <div className='bg-white p-3 md:w-[50%] w-[100%] mt-2 rounded-md border border-gray-200 shadow-lg mx-auto'>
+            <div className='flex justify-center'>
+            <div className='bg-[#fff] set-shadow p-3 lg:w-[100%] xl:w-[50%] w-[100%] mt-2 rounded-md'>
                 <label>Department Name</label><br />
                 <input type='text' className='mt-2 border border-1 pl-3 h-[43px] pr-7
 ] rounded-md focus:outline-none w-[100%] text-[15px] text-[#aeabab]'/>
@@ -136,13 +139,18 @@ const AddDepartment = () => {
                 </table>
 
 
-                <div className='text-end mt-3'>
-                  <button className='text-black pt-2 py-2 pl-5 pr-5 rounded-md  hover:bg-[#7526d1] mr-2 border border-gray-400' onClick = {()=>{navigate("/department")}}>cancel</button>
-                    <button className='bg-[#511992] pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]' onClick = {()=>{navigate("/department")}}>Save</button>
-                </div>
+        <div className='text-end mt-3 flex gap-[10px] justify-end'>
+            <Link to ='/department'>
+        <button className='first-btn pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]'>
+        Cancel
+        </button>
+        </Link>
+        <button className='second-btn pt-2 py-2 pl-5 pr-5 rounded-md text-white hover:bg-[#7526d1]'>Save</button>
+        </div>
+            </div>
             </div>
         </div>
     )
 }
 
-export default AddDepartment
+export default AddDepartment;

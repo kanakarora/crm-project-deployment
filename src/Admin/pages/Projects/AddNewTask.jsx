@@ -55,7 +55,7 @@ const AddNewTask = ({ onClose, onSave }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="2xl:fixed xl:fixed lg:fixed md:fixed sm:fixed inset-0 z-50 flex justify-center items-center"
+          className="2xl:fixed xl:fixed lg:fixed md:fixed sm:fixed inset-0 z-50 w-full flex justify-center items-center"
         >
           
           <div className="bg-white p-8 rounded-lg shadow-lg w-[65%] h-[70%] overflow-auto">

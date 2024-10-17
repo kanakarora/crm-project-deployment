@@ -3,7 +3,7 @@ import SellIcon from "@mui/icons-material/Sell";
 
 const NewTicketForm = () => {
   return (
-    <form className="overflow-x-auto">
+    <form className="overflow-x-auto ml-5">
       {/* -- Header Name --*/}
       <h1 className="text-[25px] font-medium">Ticket Information</h1>
 

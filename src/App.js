@@ -68,9 +68,8 @@ import ClientHeader from "./Client_Panel/ClientHeader";
 import SidebarClient from "./Client_Panel/SidebarClient";
 import CustomDialog from "./Admin/pages/Clients/DialougeBox";
 import ExpenseEdit from "./Admin/ExpensesClient/ExpenseEdit";
-import SideBar from "./Admin/Components/SideBar";
-
-
+import Projects from "./Admin/pages/Projects/Projects";
+import ChatInterface from "./Admin/pages/chats/ChatInterface";
 
 
 
@@ -95,23 +94,14 @@ const App = () => {
   function AdminLayout() {
     return (
       <>
-        <div className="flex">
-          {/* now the sidebar is responsive */}
-          <div className="min-h-screen">
-            {toggleSideBar && <SideBar toggleSideBar={toggleSideBar} />}
-          </div>
+      <div className="flex">
+          <SideBar />
+          <div className="w-full admin-sidebar-set overflow-hidden">
+            <NavBar />
+            <div className="w-full">
+               <Outlet />
+            </div>
 
-          {/* container for navbar and outlet */}
-          <div className='flex flex-col flex-grow overflow-hidden max-w-screen'>
-            <NavBar
-              handleToggleSideBar={handleToggleSideBar}
-              toggleSideBar={toggleSideBar}
-            />
-            <main style = {{margin:0}} className='flex-1 overflow-x-auto overflow-y-auto  my-[15px] xl:m-[30px]'>
-              <div className="mx-auto px-4 pl-3 pr-3 py-8 lg:px-4 view-not">
-                <Outlet />
-              </div>
-            </main>
           </div>
         </div>
       </>
@@ -167,6 +157,7 @@ const App = () => {
           <Route path="/addrole" element={<AddRole />} />
           {/* <Route path="/project-overview" element={<ProjectsOverview />} /> */}
           <Route path="/new-ticket" element={<NewTicket />} />
+          <Route path = '/chats' element = {<ChatInterface/>}/>
           <Route path="/addnewclient" element={<AddNewClient />} />
           <Route path="/editclient" element={<EditClient />} />
            <Route path="/project-overview" element={<ProjectsOverview />} />
@@ -185,7 +176,7 @@ const App = () => {
           <Route path="/reviewfine" element={<Reviewfine />} />
           <Route path="/worktime" element={<Worktime />} />
           <Route path="/attendence_summary" element={<Attendence_Summary />} />
-          <Route path="/projectsummary" element={<ProjectSummary />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path = "/projectsettings" element = {<Project_Setting/>} />
           <Route path = "/projectdata" element = {<ProjectData/>}/>
           <Route path = "/projectoverview" element = {<ProjectOverView/>}/>

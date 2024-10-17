@@ -74,11 +74,6 @@ const Edit_Task_Status = () => {
 
 
 
-
-
-
-
-
                                 <th className="text-[11px] w-[130px] p-[10px] border-r font-medium whitespace-nowrap">Status Name</th>
 
 
@@ -91,7 +86,7 @@ const Edit_Task_Status = () => {
 
 
                                 <th className="text-[11px] font-medium p-[10px] w-[300px] border-r whitespace-nowrap	">Status can be changed to</th>
-                                <th className="text-[11px] font-medium p-[10px] w-[148px] border-r whitespace-nowrap	">Status is hidden for</th>
+                                <th className="text-[11px] font-medium p-[10px] w-[148px]  whitespace-nowrap	">Status is hidden for</th>
 
 
 
@@ -116,7 +111,7 @@ const Edit_Task_Status = () => {
                             <td className="text-[11px] font-medium p-[10px] w-[110px]  whitespace-nowrap">#000000</td>
                             <td className="text-[11px] font-medium p-[10px] w-[110px] whitespace-nowrap">20</td>
                             <td className="text-[11px] font-medium p-[10px] w-[150px]  whitespace-nowrap">yes</td>
-                            <td className="text-[11px] font-medium p-[10px] w-[300px]  whitespace-nowrap"><Link className="first-btn p-[5px]" to="/">in Progress</Link></td>
+                            <td className="text-[11px] font-medium p-[10px] w-[300px]  whitespace-nowrap"><Link className="text-[white] rounded-lg p-[8px] bg-[#27004a]" to="/">in Progress</Link></td>
                             <td className="text-[11px] flex items-center gap-[5px] font-medium p-[10px] w-[148px]  whitespace-nowrap	">
 
                                 <div className="flex items-center justify-center text-[14px] h-[50px]">
@@ -131,7 +126,7 @@ const Edit_Task_Status = () => {
                                     {/* Modal (visible only when isOpen is true) */}
                                     {isOpen3 && (
                                         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-                                            <div className="bg-white rounded-lg shadow-lg w-96">
+                                            <div className="bg-white rounded-lg shadow-lg w-[100%] overflow-scroll h-[100%]">
                                                 {/* Modal Header */}
                                                 <div className="px-4 py-2 border-b">
                                                     <h2 className="text-lg font-semibold">Edit task status</h2>
@@ -352,11 +347,11 @@ const Edit_Task_Status = () => {
 
 
                 {accordionItems.map((item, index) => (
-                    <div key={index} className="border-b border-gray-200">
+                    <div key={index} className="">
                         {/* Accordion Header */}
                         <button
                             onClick={() => handleToggle(index)}
-                            className="flex justify-between items-center w-full text-left text-gray-800 bg-gray-100 hover:bg-gray-200 focus:outline-none"
+                            className="flex justify-between items-center w-full text-left  bg-white rounded-lg shadow-lg focus:outline-none"
                         >
                             <span>{item.title}</span>
 

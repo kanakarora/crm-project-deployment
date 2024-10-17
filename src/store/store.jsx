@@ -6,9 +6,13 @@ export const FormProvider = ({ children }) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     email: '',
-    firstName: '',
-    lastName: '',
-    companyName: '',
+    first_name: '',
+    last_name: '',
+    company_name:'',
+    time_formate:'',
+    time_zone:'',
+    date_formate:'',
+    week_formate:'',
     password: '',
     agreeToTerms: false,
   });

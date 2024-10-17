@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import group from "../../../Assets/Images/Group.svg";
 import attendance from "../../../Assets/Images/attendance.svg";
@@ -7,109 +7,100 @@ import salary from "../../../Assets/Images/salary.svg";
 import leave from "../../../Assets/Images/leave.svg";
 import penalty from "../../../Assets/Images/penalty.svg";
 import permission from "../../../Assets/Images/permission.svg";
-import StaffTab from "./StaffTab";
-import AttendanceTab from "./AttendanceTab";
-import Penalty_Overtime from "./Penalty & Overtime/Penalty_Overtime";
-import BankDetails from "./BankDetails";
-import SalaryDetails from "./SalaryDetails";
-import LeaveBalance from "../StaffSection/LeaveBalance";
-import Permission from "./Permisson";
+import PayrollSummary from "./PayrollSummary";
+import PayrollSalary from "./RunPayroll";
+import RunPayroll from "./RunPayroll";
+import AdvancePayroll from "./AdvancePayroll";
+import PayrollIncentives from "./PayrollIncentives";
+import PayrollReimbrusments from "./PayrollReimbrusments";
+import PaymentHistory from "./PaymentHistory";
 import { useGlobalContext } from "../../../Context/GlobalContext";
 
-const StaffMenu = () => {
-  const {staffTab,setStaffTab} = useGlobalContext()
+const PayrollMenu = () => {
+  const {selectedTab,setSelectedTab} = useGlobalContext()
   return (
-    <div className="staff-menu p-[10px]">
-      <h3 className="text-[20px]  font-[Nunito]">My Staff</h3>
+    <div className="staff-menu">
+      <h3 className="text-[20px]  font-[Nunito]">Pay Roll</h3>
 
-      <div className="tab-section mt-[30px] overflow-x-scroll">
-      <Tabs selectedIndex={staffTab} onSelect={(index) => setStaffTab(index)} className='overflow-x-auto'>
-          <TabList className="flex   gap-[22px] bg-[#FFFFFF]  rounded-[12px]  p-[4px] pb-[4px]  set-shadow overflow-x-auto">
+      <div className="tab-section mt-[30px]">
+      <Tabs selectedIndex={selectedTab} onSelect={(index) => setSelectedTab(index)}>
+          <TabList className="flex   w-[100%] overflow-x-scroll bg-[#FFFFFF]  rounded-[12px]  p-[4px] pb-[4px]  set-shadow ">
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={group} />
-                <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">Staff</h2>
+                <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">Payroll Summary</h2>
               </div>
             </Tab>
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={attendance} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Attendance{" "}
+                  Run Payroll
                 </h2>
               </div>
             </Tab>
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={bank} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Bank Details
+                  Advance
                 </h2>
               </div>
             </Tab>
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={salary} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Salary Details
+                  Incentives
                 </h2>
               </div>
             </Tab>
             <Tab>
               <div className="flex items-center whitespace-nowrap mr-[20px]">
-                <img src={leave} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Leave Balances & Policy
+                  Reimbrusments
                 </h2>
               </div>
             </Tab>
+ 
             <Tab>
               <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={penalty} />
                 <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Penalty & Overtime{" "}
-                </h2>
-              </div>
-            </Tab>
-            <Tab>
-              <div className="flex items-center  whitespace-nowrap mr-[20px]">
-                <img src={permission} />
-                <h2 className="text-sm text-[#B1B1B1]  ml-[15px]">
-                  Permissions
+                  Payment History
                 </h2>
               </div>
             </Tab>
           </TabList>
 
           <TabPanel>
-            <StaffTab />
+            <PayrollSummary />
           </TabPanel>
 
           <TabPanel>
-            <AttendanceTab />
-          </TabPanel>
-          <TabPanel>
-            <BankDetails/>
-          </TabPanel>
-          <TabPanel>
-            <SalaryDetails/>
-          </TabPanel>
-          <TabPanel>
-            <LeaveBalance/>
+            <RunPayroll />
           </TabPanel>
 
           <TabPanel>
-            <Penalty_Overtime />
+
+            <AdvancePayroll />
           </TabPanel>
-        
+
+          <TabPanel>
+
+            <PayrollIncentives />
+          </TabPanel>
+
           
           <TabPanel>
-            <Permission />
+
+            <PayrollReimbrusments />
           </TabPanel>
+
+          <TabPanel>
+
+            <PaymentHistory />
+          </TabPanel>
+
         </Tabs>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StaffMenu;
+export default PayrollMenu
