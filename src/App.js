@@ -94,11 +94,11 @@ const App = () => {
   function AdminLayout() {
     return (
       <>
-      <div className="flex">
+      <div className="flex ">
           <SideBar />
-          <div className="w-full admin-sidebar-set overflow-hidden">
+          <div className="w-full admin-sidebar-set overflow-hidden ">
             <NavBar />
-            <div className="w-full">
+            <div className="w-full ">
                <Outlet />
             </div>
 
